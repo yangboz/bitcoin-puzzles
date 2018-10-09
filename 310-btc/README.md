@@ -8,6 +8,14 @@ Head over to https://bitcoinchallenge.codes/ for more details.
 
 ### 0.1 BTC 
 
+#### XnView
+
+1.open File, chanllenge.png
+
+2.open Menu, Image >> Map >> Normalize
+
+3.open Menu, Image >> Extract channel >> Alpha
+
 #### ImageMagick
 
 Normalize:http://www.imagemagick.org/script/command-line-options.php#normalize
