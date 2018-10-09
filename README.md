@@ -1,5 +1,5 @@
 # bitcoin-puzzles
-The place for all Bitcoin related puzzles! 
+The place for Bitcoin related puzzles! 
 
 ## references
 
