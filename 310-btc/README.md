@@ -16,15 +16,18 @@ Head over to https://bitcoinchallenge.codes/ for more details.
 
 3.open Menu, Image >> Extract channel >> Alpha
 
+4.ciper-text: https://github.com/eugenekolo/sec-tools.git
+
+
 #### ImageMagick
 
-Normalize:http://www.imagemagick.org/script/command-line-options.php#normalize
+Normalize: http://www.imagemagick.org/script/command-line-options.php#normalize
 
 ```
 convert -normalize challenge.png challenge_normalized.png
 ```
 
-Separate:http://www.imagemagick.org/Usage/color_basics/#channels
+Separate: http://www.imagemagick.org/Usage/color_basics/#channels
 
 ```
 convert -colorspace CMYK -separate challenge_normalized.png challenge_normalized_separated_CMYK_%d.png
