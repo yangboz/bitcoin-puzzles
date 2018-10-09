@@ -2,7 +2,7 @@
 
 Head over to https://bitcoinchallenge.codes/ for more details.
 
-
+[!raw image](https://raw.githubusercontent.com/yangboz/bitcoin-puzzles/master/310-btc/challenge.png)
 
 ## Solutions:
 
