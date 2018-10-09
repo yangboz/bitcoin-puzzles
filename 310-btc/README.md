@@ -65,3 +65,5 @@ A guy called "Lustre" told me he managed to decode it. Good job!
 https://www.reddit.com/r/Bitcoin/comments/9kq7it/introducing_the_310_btc_bitcoin_challenge/
 
 https://www.youtube.com/results?search_query=bitcoin+challenge+310
+
+https://github.com/yangboz/imagemagick-cheatsheet
