@@ -4,7 +4,7 @@ Head over to https://bitcoinchallenge.codes/ for more details.
 
 Work in progress. If you'd like to help, please do. There's a lot of work to be done.
 
-(!raw image)[https://raw.githubusercontent.com/yangboz/bitcoin-puzzles/master/310-btc/challenge.png]
+![raw image](https://raw.githubusercontent.com/yangboz/bitcoin-puzzles/master/310-btc/challenge.png)
 
 ## Solutions:
 
