@@ -18,6 +18,15 @@ So, Let's watch and learn.
 
 ### 0.1 BTC 
 
+#### Print out and 
+
+hint: Partly
+
+Ref: http://msn.iecs.fcu.edu.tw/~ccc/profile/publish/ij_paper2/IJ-664.pdf
+
+
+### 0.1 BTC 
+
 #### XnView
 
 1.open File, chanllenge.png
@@ -1113,6 +1122,7 @@ STRUCTURE OF PNG FILE: challenge.png
  3476698 | IDAT  |   12126 | *..1........}.....?...3w..y... | 0x87e7e2e4
  3488836 | IEND  |       0 | 
 ```
+
 
 ### 0.2 BTC
 
