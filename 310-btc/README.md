@@ -68,8 +68,7 @@ Decimal calculation:
 
 ```
 
-
-
+Ref: https://www.rapidtables.com/convert/number/hex-to-decimal.html
 
 #### ImageMagick
 
