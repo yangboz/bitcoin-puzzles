@@ -40,6 +40,8 @@ identify challenge.png
 challenge.png PNG 2944x1912 2944x1912+0+0 8-bit sRGB 3.32722MiB 0.010u 0:00.009
 ```
 
+Hint:
+
 ```
 identify -verbose challenge.png
 
@@ -925,6 +927,8 @@ zsteg chanllenge.png
 b1,r,lsb,xy         .. file: MPEG ADTS, layer III,  v2.5, Stereo
 b2,r,msb,xy         .. file: ddis/ddif
 ```
+
+Hint:
 
 ```
 zsteg -a chanllenge.png
