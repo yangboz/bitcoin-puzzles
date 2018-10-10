@@ -46,6 +46,8 @@ finally hidden url: https://bitcoinchallenge.codes/register-310/
 
 https://github.com/paulosolves310/paulosolves310
 
+https://docs.google.com/document/d/1AU-C71rL8EOCYdbxYESDYW9Jmm-zdoyy46X_F9pRjzI/
+
 #### ImageMagick
 
 Identify: https://imagemagick.org/script/identify.php
