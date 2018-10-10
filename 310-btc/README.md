@@ -40,6 +40,16 @@ convert -colorspace RGB -separate challenge_normalized.png challenge_normalized_
 
 ```
 
+#### https://github.com/zed-0xff/zsteg
+
+```
+gem install zsteg
+```
+
+```
+zsteg chanllenge.png
+```
+
 
 ### 0.2 BTC
 
