@@ -4,6 +4,12 @@ Head over to https://bitcoinchallenge.codes/ for more details.
 
 Work in progress. If you'd like to help, please do. There's a lot of work to be done.
 
+And tips to: 
+
+Bitcoin: 1D6tNjbbjNZY54FTzLDGsb4mZ98MDkhLd3
+
+Ethereum: 0xEF83a5fA24ddB0a16cbDF829C0305F3b195ba337
+
 ![raw image](https://raw.githubusercontent.com/yangboz/bitcoin-puzzles/master/310-btc/challenge.png)
 
 ## Solutions:
@@ -20,6 +26,7 @@ Work in progress. If you'd like to help, please do. There's a lot of work to be 
 
 4.ciper-text: https://github.com/eugenekolo/sec-tools.git
 
+https://github.com/paulosolves310/paulosolves310
 
 #### ImageMagick
 
