@@ -26,7 +26,11 @@ So, Let's watch and learn.
 
 3.open Menu, Image >> Extract channel >> Alpha
 
+Hidden images:
+
 ![hidden images](https://raw.githubusercontent.com/yangboz/bitcoin-puzzles/master/310-btc/Screen%20Shot%202018-10-09%20at%209.17.56%20PM.png)
+
+Hidden images_QRCode:
 
 ![hidden image_qr_code](https://raw.githubusercontent.com/yangboz/bitcoin-puzzles/master/310-btc/Screen%20Shot%202018-10-09%20at%209.18.22%20PM.png)
 
