@@ -52,11 +52,15 @@ QRCode scanned url: https://bitcoinchallenge.codes/register-310/
 3)Registering on the website say "Tell me. What is the SHA256 hash of the data you got so far? (SHA256 of all data on a single line)."
 ```
 
+Channel talks related: https://discordapp.com/channels/403741830812008449/487515469771964416
+
 https://github.com/eugenekolo/sec-tools.git
 
 https://github.com/paulosolves310/paulosolves310
 
 https://docs.google.com/document/d/1AU-C71rL8EOCYdbxYESDYW9Jmm-zdoyy46X_F9pRjzI/
+
+https://hastebin.com/onotopenes.cpp
 
 from the alpha channel:
 
