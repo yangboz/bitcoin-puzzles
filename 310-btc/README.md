@@ -925,7 +925,7 @@ convert -colorspace RGB -separate challenge_normalized.png challenge_normalized_
 
 ```
 
-#### https://github.com/zed-0xff/zsteg
+#### zsteg https://github.com/zed-0xff/zsteg
 
 ```
 gem install zsteg
