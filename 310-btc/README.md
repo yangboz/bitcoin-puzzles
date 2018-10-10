@@ -156,6 +156,7 @@ The whole  seed (12 from 0.1 + 12 from @goldfinch  = the 24 words) are the resul
 
 But wait, how to find the seed words ? https://en.bitcoin.it/wiki/Seed_phrase
 
+Ref: https://docs.google.com/document/d/1nUAhlC_n21ZLZcRAHpLw9G--gpk4NUVIJqVp9F68qp4/preview
 
 the hex table hint:
 
