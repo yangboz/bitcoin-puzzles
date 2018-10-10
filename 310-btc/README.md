@@ -12,6 +12,8 @@ Ethereum: 0xEF83a5fA24ddB0a16cbDF829C0305F3b195ba337
 
 ![raw image](https://raw.githubusercontent.com/yangboz/bitcoin-puzzles/master/310-btc/challenge.png)
 
+So, Let's watch and learn.
+
 ## Solutions:
 
 ### 0.1 BTC 
