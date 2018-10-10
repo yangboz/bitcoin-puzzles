@@ -26,6 +26,12 @@ So, Let's watch and learn.
 
 3.open Menu, Image >> Extract channel >> Alpha
 
+![hidden images](https://raw.githubusercontent.com/yangboz/bitcoin-puzzles/master/310-btc/Screen%20Shot%202018-10-09%20at%209.17.56%20PM.png)
+
+![hidden image_qr_code](https://raw.githubusercontent.com/yangboz/bitcoin-puzzles/master/310-btc/Screen%20Shot%202018-10-09%20at%209.18.22%20PM.png)
+
+finally hidden url: https://bitcoinchallenge.codes/register-310/
+
 4.ciper-text: https://github.com/eugenekolo/sec-tools.git
 
 https://github.com/paulosolves310/paulosolves310
