@@ -75,9 +75,7 @@ jH9DqbM6DUptu3HJbAVwXQ==
 
 then save it to file named 'line310alpha.b64';
 
-![hidden password](https://raw.githubusercontent.com/yangboz/bitcoin-puzzles/master/310-btc/Screen_Shot_2018-10-10_at_4.16.24_PM.png)
-
-then decrypt it.
+Usin password: L379F48502 and decrypt it.
 
 ```
 openssl aes-256-cbc -md md5 -d -in line310alpha.b64 -out line310alpha.decrypted -base64 -k L379F48502
