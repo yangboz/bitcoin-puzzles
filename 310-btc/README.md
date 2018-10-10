@@ -147,7 +147,13 @@ strip the 310s, the result does not correspond to a bip 39 wallet seed, does not
 cry buyer grain save vault sign lyrics rhythm music fury horror mansion debris slim immune lock actual tide gas vapor fringe pole flat glance
 ```
 
-But wait, how to find the seed words ?
+Congrats! 0.2BTC puzzle sovled!
+
+The whole  seed (12 from 0.1 + 12 from @goldfinch  = the 24 words) are the result of the 0.2 btc address: 1G7qsUy5x9bUd1pRfhVZ7cuB5cMUP4hsfR, and has been transfered: https://blockexplorer.com/address/1G7qsUy5x9bUd1pRfhVZ7cuB5cMUP4hsfR
+
+
+But wait, how to find the seed words ? https://en.bitcoin.it/wiki/Seed_phrase
+
 
 the hex table hint:
 
