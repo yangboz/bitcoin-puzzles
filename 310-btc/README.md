@@ -105,6 +105,8 @@ Now find something really interesting here:
 
 Congrats! 0.1BTC puzzle sovled!
 
+But wait, how to find the seed words from https://github.com/bitcoin/bips/blob/master/bip-0039/english.txt ?
+
 the hex table hint:
 
 ![](https://raw.githubusercontent.com/yangboz/bitcoin-puzzles/master/310-btc/Screen%20Shot%202018-10-10%20at%207.14.45%20PM.png)
