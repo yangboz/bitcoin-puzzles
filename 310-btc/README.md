@@ -18,6 +18,8 @@ So, Let's watch and learn.
 
 ### 0.1 BTC  ：https://bitcointalk.org/index.php?topic=5042285.40
 
+[](https://raw.githubusercontent.com/yangboz/bitcoin-puzzles/master/310-btc/solutions_1_2.jpg)
+
 #### Print out and 
 
 hint: Partly
@@ -927,6 +929,9 @@ Separate: http://www.imagemagick.org/Usage/color_basics/#channels
 ```
 convert -colorspace CMYK -separate challenge_normalized.png challenge_normalized_separated_CMYK_%d.png
 ```
+And found:
+
+![](https://raw.githubusercontent.com/yangboz/bitcoin-puzzles/master/310-btc/A_challenge_normalized_separated_CMYK_3.png)
 
 ```
 convert -colorspace RGB -separate challenge_normalized.png challenge_normalized_separated_RGB_%d.png 
