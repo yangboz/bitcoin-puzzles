@@ -1004,9 +1004,115 @@ b4,rgb,lsb,Yx       .. file: MPEG ADTS, layer III, v1, 192 kbps, 32 kHz, 2x Mona
 b8,rgb,lsb,Yx       .. text: "\t\t\t\n\n\n   "
 b1,abgr,msb,Yx,prime.. file: old packed data
 b5,rgba,lsb,Yx,prime.. file: AIX core file fulldump
+```
+
+#### Exiv2: http://www.exiv2.org/
+
+```
+brew install exiv2
+```
+Hints:
+
+1.extract an ICC profile to stdout.
 
 ```
 
+HLinomntrRGB XYZ ?	1acspMSFTIEC sRGB???-HP  cprtP3desc?lwtpt?bkptrXYZgXYZ,bXYZ@dmndTpdmdd??vuedL?view?$lumi?meas
+                                                                                                                     $tech0
+                                                                                                                           rTRC<
+                                                                                                                               gTRC<
+ bTRC<
+     textCopyright (c) 1998 Hewlett-Packard CompanydescsRGB IEC61966-2.1sRGB IEC61966-2.1XYZ ?Q?XYZ XYZ o?8??XYZ b????XYZ $????descIEC http://www.iec.chIEC http://www.iec.chdesc.IEC 61966-2.1 Default RGB colour space - sRGB.IEC 61966-2.1 Default RGB colour space - sRGBdesc,Reference Viewing Condition in IEC61966-2.1,Reference Viewing Condition in IEC61966-2.1view??_.???
+                                                                                                                \?XYZ L	VPW?meas?sig CRT curv
+%+28>ELRY`gnu|??????????????????????????????
+                              &/8AKT]gqz????????????
++:IXgw????????'7HYj{???????+=Oat???????             !-8COZfr~?????????? -;HUcq~?????????
+                                    ?		%	:	O	d	y	?	?	?	?	?	?
+
+'
+=
+T
+j
+?
+?
+?
+?
+?
+?
+
+*R{???Gp???@j???>i???  A l ? ? ?!!H!u!?!?!?"'"U"?"?"?#
+(?(q(?(?))8)k)?)?**5*h*?*?++6+i+?+?,,9,n,?,?-'I'z'?'?(
+3F33?3?4+4e4?4?55M5?5?5?676r6?6?7$7`7?7?88P8?8?99B99?9?:6:t:?:?;-;k;?;?<'<e<?<?="=a=?=?> >`>?>??!?a????@#@d@?@?A)AjA?A?B0BrB?B?C:C}C?DDGD?D?EEUE?E?F"FgF?F?G5G{G?HHKH?H?IIcI?I?J7J}J?K
+                                                    KSK?K?L*LrL?MMJM?M?N%NnN?OOIO?O?P'PqP?QQPQ?Q?R1R|R?SS_S?S?TBT?T?U(UuU?VV\V?V?WDW?W?X/X}X?YYiY?ZZVZ?Z?[E[?[?\5\?\?]']x]?^^l^?__a_?``W`?`?aOa?a?bIb?b?cCc?c?d@d?d?e=e?e?f=f?f?g=g?g?h?h?h?iCi?i?jHj?j?kOk?k?lWl?m`m?nnkn?ooxo?p+p?p?q:q?q?rKr?ss]s?ttpt?u(u?u?v>v?v?wVw?xxnx?y*y?y?zFz?{{c{?|!|?|?}A}?~~b~?#??G???
+?k?͂0????W???????G????r?ׇ;????i?Ή3?????d?ʋ0?????c?ʍ1?????f?Ώ6????n?֑?????z??M??? ?????_?ɖ4???
+?u???L???$?????h?՛B????????d?Ҟ@????????i?ءG???&????v??V?ǥ8????????n??R?ĩ7???????u??\?ЭD???-???????u??`?ֲK?³8???%???????y??h??Y?ѹJ?º;???.???!??????
+?????z???p???g???_???X???Q???K???F???Aǿ?=ȼ?:ɹ?8ʷ?6˶?5̵?5͵?6ζ?7ϸ?9к?<Ѿ?????D???I???N???U???\???d???l???v??ۀ?܊?ݖ?ޢ?)߯?6??D???S???c???s????2??F???[???p??????(??@???X???r??????4???P???m????????8???W???w????)???K???m?? 
+```
+
+1. to obtain the offset and length of a chunk which can then be extracted with dd. Ref:http://dev.exiv2.org/boards/3/topics/2635
+
+```
+(base) yangbozs-MacBook-Air-2:Downloads yangboz$ exiv2 -pS challenge.png 
+STRUCTURE OF PNG FILE: challenge.png
+ address | chunk |  length | data                           | checksum
+       8 | IHDR  |      13 | .......x....                   | 0xdc794375
+      33 | iCCP  |    2609 | ICC Profile..x...wTS.....7.P.. | 0xa4cc5c39
+    2654 | IDAT  |   65536 | x..}............"%.*V.....vz.. | 0xb5ba26fb
+   68202 | IDAT  |   65536 | c.....v.....i.....Lh4.(.J....@ | 0x111f4049
+  133750 | IDAT  |   65536 | ._?H.......o....;.?f......'~.. | 0xbc23a39d
+  199298 | IDAT  |   65536 | ..>.p.....>S.....z............ | 0x2e571658
+  264846 | IDAT  |   65536 | .'O....f...iC4m.....J.M..y..A. | 0x04aae3eb
+  330394 | IDAT  |   65536 | E..P(H...U.N._/.........f..K.. | 0x9d4b4008
+  395942 | IDAT  |   65536 | .j..z.^..SSSMSF?..3.........3U | 0xd3eff85d
+  461490 | IDAT  |   65536 | J%6..........O.........}...*.. | 0xf6295edd
+  527038 | IDAT  |   65536 | .f..R..._..T..Z.v...kG....n..Z | 0x1412f7f1
+  592586 | IDAT  |   65536 | d511.........=...$.Ix<......'. | 0x5b141933
+  658134 | IDAT  |   65536 | .......6.......*....W(...6z_|. | 0x9d8a9cac
+  723682 | IDAT  |   65536 | ...t.?....t..S....@...w..W..?. | 0xc9c1d73e
+  789230 | IDAT  |   65536 | ........y...._...e<{......w.}. | 0x3c519a62
+  854778 | IDAT  |   65536 | ?qy.(.....D.G|ttt`{{.%.....|>. | 0x43ec07ab
+  920326 | IDAT  |   65536 | ...A._....[[[p:.B.wvv.i*....@. | 0x77ac78c3
+  985874 | IDAT  |   65536 | ...?..k6.*6..........}......z. | 0x470e234e
+ 1051422 | IDAT  |   65536 | .....T..tt..n:..p8......i..g2. | 0x8cd6997d
+ 1116970 | IDAT  |   65536 | .'..t..W....S2................ | 0x34cd2f8d
+ 1182518 | IDAT  |   65536 | ........)I.X....D".....|..'... | 0x22028e18
+ 1248066 | IDAT  |   65536 | ....\..b.....uG... .....;.m... | 0x7e7f4e68
+ 1313614 | IDAT  |   65536 | .....C=........l....C.._~..... | 0x874c9e99
+ 1379162 | IDAT  |   65536 | ..d2j.,.aq.Q..pp..n..1.....o.N | 0x349e2b34
+ 1444710 | IDAT  |   65536 | ....n.....%.iC..,>.R).>....e.. | 0x2c32657b
+ 1510258 | IDAT  |   65536 | ..D.Q..y...[.g..3..rjm..?.P... | 0x7d37f530
+ 1575806 | IDAT  |   65536 | ..1.x..U+.O.<...7....._....!.5 | 0xe4fd1304
+ 1641354 | IDAT  |   65536 | .k..XXX.......T*...2....|...y. | 0x8afc81ec
+ 1706902 | IDAT  |   65536 | .....?'.S...6.....T..H.X.q.(`. | 0x623fc77b
+ 1772450 | IDAT  |   65536 | ....G....3B....I....../S.....$ | 0x351dbd6c
+ 1837998 | IDAT  |   65536 | tN._..%..D'Q......WM._0....... | 0x6139ea29
+ 1903546 | IDAT  |   65536 | h4jy.NKNS.^............1;;.... | 0x3e48bf85
+ 1969094 | IDAT  |   65536 | ....a........O.......F..H"..w~ | 0x1a982334
+ 2034642 | IDAT  |   65536 | :....h4....Q`....?.m'.....F... | 0x5c7e4a40
+ 2100190 | IDAT  |   65536 | ...39............~Ag5x......Z. | 0x4fe0b8f2
+ 2165738 | IDAT  |   65536 | ....?.9.^/...m..6..0....W..... | 0xfa494691
+ 2231286 | IDAT  |   65536 | IAJ....l6...eD"...A.......R..| | 0x0aba5019
+ 2296834 | IDAT  |   65536 | .`..(.....]Q.W...>...a..~.?.!. | 0xa07e73cd
+ 2362382 | IDAT  |   65536 | .V...(.k...={.p8............u. | 0xd3278c6b
+ 2427930 | IDAT  |   65536 | d....5k.d.O.}....r.&...?o5vww. | 0x2958d850
+ 2493478 | IDAT  |   65536 | !...^...9t:.+...o0.D.ZE..B:... | 0x9f3a3d6b
+ 2559026 | IDAT  |   65536 | .{._...r..Y.._........S....1.. | 0x8ac3bb63
+ 2624574 | IDAT  |   65536 | . ..I.^NM.\.8.N..f..Q..Z...... | 0x149f3c3a
+ 2690122 | IDAT  |   65536 | .h...G.l#]...U....i..qQqQ._.(. | 0xaef35eb6
+ 2755670 | IDAT  |   65536 | .....pp.....;..L&.].h...(..../ | 0xc837812e
+ 2821218 | IDAT  |   65536 | :..$......../..G.....f "...B.. | 0x5c9e399c
+ 2886766 | IDAT  |   65536 | j....\...q..?....M.I&...B...C& | 0xf47eb72a
+ 2952314 | IDAT  |   65536 | .T.S..^.y...........<8....?... | 0x5961f9b5
+ 3017862 | IDAT  |   65536 | t.+..>|......K...GB...S.K].c.Z | 0x1f7e0f55
+ 3083410 | IDAT  |   65536 | <....\.p..7oF{{;b.......mmm... | 0x626efb31
+ 3148958 | IDAT  |   65536 | ....7o.C.=...~...?..o.....k... | 0x4d143d1c
+ 3214506 | IDAT  |   65536 | ..../4...`0...............f... | 0x8af9a1c7
+ 3280054 | IDAT  |   65536 | ..k....:A...]...7..M.......l*. | 0x9d18795f
+ 3345602 | IDAT  |   65536 | $....nll.|............qLNNbjj. | 0x5e10e67c
+ 3411150 | IDAT  |   65536 | ....R..0...*&'';.....y...l.... | 0xe9f3eee2
+ 3476698 | IDAT  |   12126 | *..1........}.....?...3w..y... | 0x87e7e2e4
+ 3488836 | IEND  |       0 | 
+```
 
 ### 0.2 BTC
 
