@@ -1152,6 +1152,8 @@ http://www.libpng.org/pub/png/spec/1.2/PNG-Decoders.html
 
 http://www.libpng.org/pub/png/spec/1.2/PNG-ColorAppendix.html
 
+https://www.sno.phy.queensu.ca/~phil/exiftool/TagNames/PNG.html
+
 http://dev.exiv2.org/boards/3/topics/2635
 
 https://purepng.readthedocs.io/en/latest/chunk.html
