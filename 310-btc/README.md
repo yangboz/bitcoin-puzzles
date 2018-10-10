@@ -1147,3 +1147,11 @@ https://www.reddit.com/r/Bitcoin/comments/9kq7it/introducing_the_310_btc_bitcoin
 https://www.youtube.com/results?search_query=bitcoin+challenge+310
 
 https://github.com/yangboz/imagemagick-cheatsheet
+
+http://www.libpng.org/pub/png/spec/1.2/PNG-Decoders.html
+
+http://www.libpng.org/pub/png/spec/1.2/PNG-ColorAppendix.html
+
+http://dev.exiv2.org/boards/3/topics/2635
+
+https://purepng.readthedocs.io/en/latest/chunk.html
