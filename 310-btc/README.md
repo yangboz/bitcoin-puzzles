@@ -58,6 +58,17 @@ https://github.com/paulosolves310/paulosolves310
 
 https://docs.google.com/document/d/1AU-C71rL8EOCYdbxYESDYW9Jmm-zdoyy46X_F9pRjzI/
 
+from the alpha channel:
+
+```
+U2FsdGVkX19Q3I//VCH0U3cVtITZ3ckILJnUcdPX3Gs5qjdF1UjZ3mAftGivtFYD
+N5ZCSkBynnVqBawl4p8wKO0O8zI6D0A1+VEVCUyEvEeNoUfGcS0El9d93vsPxbg7
+D5avufQsScgsk3QEtq9/M4Do32OKFeq00/3NrxWOsMmh3AXmDzuuZ0qmZaI7re16
+FcXIrmPPiQDOHRc7wt0ng6qLiNz7VqESRTdxPOahKFRkWT8sT+Ur2y+2iZ2LEaxN
+M7UZqcPwYgm6FoKOVjnqdeg30R27jc6AoFPyRZ2g8+EJMp3n/pf94oSCLEWkc0os
+jH9DqbM6DUptu3HJbAVwXQ==
+```
+
 the hex table part:
 
 ![](https://raw.githubusercontent.com/yangboz/bitcoin-puzzles/master/310-btc/Screen%20Shot%202018-10-10%20at%207.14.45%20PM.png)
