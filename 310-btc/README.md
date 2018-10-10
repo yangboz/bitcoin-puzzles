@@ -16,7 +16,7 @@ So, Let's watch and learn.
 
 ## Solutions:
 
-### 0.1 BTC 
+### 0.1 BTC  ：https://bitcointalk.org/index.php?topic=5042285.40
 
 #### Print out and 
 
