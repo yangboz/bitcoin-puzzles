@@ -37,6 +37,8 @@ Normalize: http://www.imagemagick.org/script/command-line-options.php#normalize
 convert -normalize challenge.png challenge_normalized.png
 ```
 
+Channel: http://www.imagemagick.org/Usage/color_basics/#channels
+
 Separate: http://www.imagemagick.org/Usage/color_basics/#channels
 
 ```
