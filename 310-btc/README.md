@@ -75,7 +75,7 @@ jH9DqbM6DUptu3HJbAVwXQ==
 
 then save it to file named 'line310alpha.b64';
 
-then decrypt.
+then decrypt it.
 
 ```
 openssl aes-256-cbc -md md5 -d -in line310alpha.b64 -out line310alpha.decrypted -base64 -k L379F48502
@@ -102,6 +102,8 @@ Now find something really interesting here:
 ---
 310 BTC
 ```
+
+Congrats! 0.1BTC puzzle sovled!
 
 the hex table hint:
 
