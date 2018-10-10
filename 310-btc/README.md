@@ -48,6 +48,8 @@ gem install zsteg
 
 ```
 zsteg chanllenge.png
+b1,r,lsb,xy         .. file: MPEG ADTS, layer III,  v2.5, Stereo
+b2,r,msb,xy         .. file: ddis/ddif
 ```
 
 
