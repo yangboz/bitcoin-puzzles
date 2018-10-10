@@ -23,7 +23,7 @@ Work in progress. If you'd like to help, please do. There's a lot of work to be 
 
 #### ImageMagick
 
-Identify:
+Identify: https://imagemagick.org/script/identify.php
 
 ```
 identify challenge.png
