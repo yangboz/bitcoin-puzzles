@@ -75,6 +75,8 @@ jH9DqbM6DUptu3HJbAVwXQ==
 
 then save it to file named 'line310alpha.b64';
 
+![hidden password](https://raw.githubusercontent.com/yangboz/bitcoin-puzzles/master/310-btc/Screen_Shot_2018-10-10_at_4.16.24_PM.png)
+
 then decrypt it.
 
 ```
@@ -112,6 +114,8 @@ And seed words,from https://github.com/bitcoin/bips/blob/master/bip-0039/english
 ```
 debris slim immune lock actual tide gas vapor fringe pole flat glance
 ```
+
+![](https://raw.githubusercontent.com/yangboz/bitcoin-puzzles/master/310-btc/Screenshot_from_2018-10-10_19-58-51.png)
 
 0.2 SEED:(ref: https://hastebin.com/onotopenes.cpp)
 
