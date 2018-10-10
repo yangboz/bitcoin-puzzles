@@ -922,9 +922,7 @@ Normalize: http://www.imagemagick.org/script/command-line-options.php#normalize
 convert -normalize challenge.png challenge_normalized.png
 ```
 
-Channel: http://www.imagemagick.org/Usage/color_basics/#channels
-
-Separate: http://www.imagemagick.org/Usage/color_basics/#channels
+Channel/Separate: http://www.imagemagick.org/Usage/color_basics/#channels
 
 ```
 convert -colorspace CMYK -separate challenge_normalized.png challenge_normalized_separated_CMYK_%d.png
