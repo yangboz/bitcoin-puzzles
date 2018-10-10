@@ -105,7 +105,49 @@ Now find something really interesting here:
 
 Congrats! 0.1BTC puzzle sovled!
 
-But wait, how to find the seed words from https://github.com/bitcoin/bips/blob/master/bip-0039/english.txt ?
+And seed words,from https://github.com/bitcoin/bips/blob/master/bip-0039/english.txt 
+
+0.1 SEED:
+
+```
+debris slim immune lock actual tide gas vapor fringe pole flat glance
+```
+
+0.2 SEED:(ref: https://hastebin.com/onotopenes.cpp)
+
+```
+-----------------------------------------------------------------------------
+copied from discord
+
+i took the mirrored curves as forming 5 groups of chars
+L3, 7, 02, 584, 9F
+and figured it might make up the password
+since there's 5 "phrases" i figured it's 5! combinations or 120
+generated all possible and tried them
+it didn't work at first until i reversed 584 to 485
+anyway the password is L379F48502
+i still don't know the intended solution
+but there's a way to link the 5 phrases together in the image that i still don't know
+it's probably important to find this as there is likely still information hidden
+
+-----
+
+following that unencrypted result you can shift it with the previous date from the first challenge
+to reveal this data
+310 310 310 310 310 310
+1C4 65F 38E 41C 018 70F
+301 78C 2E9 53D 2C5 316
+310 310 310 310 310 310
+
+```
+
+strip the 310s, the result does not correspond to a bip 39 wallet seed, does not decrypt the remaining file, and does not hash for the registration form...
+
+``` 
+cry buyer grain save vault sign lyrics rhythm music fury horror mansion debris slim immune lock actual tide gas vapor fringe pole flat glance
+```
+
+But wait, how to find the seed words ?
 
 the hex table hint:
 
