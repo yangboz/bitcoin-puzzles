@@ -23,6 +23,14 @@ Work in progress. If you'd like to help, please do. There's a lot of work to be 
 
 #### ImageMagick
 
+Identify:
+
+```
+identify challenge.png
+
+challenge.png PNG 2944x1912 2944x1912+0+0 8-bit sRGB 3.32722MiB 0.010u 0:00.009
+```
+
 Normalize: http://www.imagemagick.org/script/command-line-options.php#normalize
 
 ```
@@ -48,6 +56,7 @@ gem install zsteg
 
 ```
 zsteg chanllenge.png
+
 b1,r,lsb,xy         .. file: MPEG ADTS, layer III,  v2.5, Stereo
 b2,r,msb,xy         .. file: ddis/ddif
 ```
