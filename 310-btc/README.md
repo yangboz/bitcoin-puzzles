@@ -73,7 +73,37 @@ M7UZqcPwYgm6FoKOVjnqdeg30R27jc6AoFPyRZ2g8+EJMp3n/pf94oSCLEWkc0os
 jH9DqbM6DUptu3HJbAVwXQ==
 ```
 
-the hex table part:
+then save it to file named 'line310alpha.b64';
+
+then decrypt.
+
+```
+openssl aes-256-cbc -md md5 -d -in line310alpha.b64 -out line310alpha.decrypted -base64 -k L379F48502
+```
+
+cat  the decrypted result:
+
+```
+Bitcoin Challenge ..... 310 BTC
+https://bitcoinchallenge.codes/
+
+---
+
+Well done!
+Now find something really interesting here:
+
+
+511 B20 332 328 410 530
+245 651 58F C2C 03A 717
+401 9AC 36A 53F 4C6 B26
+332 328 410 530 491 312
+
+
+---
+310 BTC
+```
+
+the hex table hint:
 
 ![](https://raw.githubusercontent.com/yangboz/bitcoin-puzzles/master/310-btc/Screen%20Shot%202018-10-10%20at%207.14.45%20PM.png)
 
@@ -104,6 +134,7 @@ Decimal calculation:
 + (15 × 16³) + (12 × 16²) + (4 × 16¹) + (11 × 16⁰) 
 = 33365056734088703611062748590304661904804730708037218481712069707
 ```
+
 
 Ref: https://www.rapidtables.com/convert/number/hex-to-decimal.html
 
