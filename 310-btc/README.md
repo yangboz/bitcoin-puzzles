@@ -1283,6 +1283,8 @@ STRUCTURE OF PNG FILE: challenge.png
 
 https://www.blockchain.com/btc/tree/380216200
 
+[review of 310BTC solution](https://raw.githubusercontent.com/yangboz/bitcoin-puzzles/master/310-btc/310Results.png)
+
 ## references
 
 https://www.reddit.com/r/Bitcoin/comments/9kq7it/introducing_the_310_btc_bitcoin_challenge/
