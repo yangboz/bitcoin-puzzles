@@ -2,6 +2,8 @@
 
 Head over to https://bitcoinchallenge.codes/ for more details.
 
+Reddit update news: https://www.reddit.com/r/Bitcoin/comments/9kq7it/introducing_the_310_btc_bitcoin_challenge/
+
 Work in progress. If you'd like to help, please do. There's a lot of work to be done.
 
 And tips to: 
@@ -75,7 +77,7 @@ jH9DqbM6DUptu3HJbAVwXQ==
 
 then save it to file named 'line310alpha.b64';
 
-then decrypt it.
+Use magic number/password: L379F48502 and decrypt it.
 
 ```
 openssl aes-256-cbc -md md5 -d -in line310alpha.b64 -out line310alpha.decrypted -base64 -k L379F48502
@@ -105,13 +107,19 @@ Now find something really interesting here:
 
 Congrats! 0.1BTC puzzle sovled!
 
-And seed words,from https://github.com/bitcoin/bips/blob/master/bip-0039/english.txt 
+And decrypted the private seed words,from https://github.com/bitcoin/bips/blob/master/bip-0039/english.txt 
+
+```
+python challenge-0.1btc.py
+```
 
 0.1 SEED:
 
 ```
 debris slim immune lock actual tide gas vapor fringe pole flat glance
 ```
+
+![](https://raw.githubusercontent.com/yangboz/bitcoin-puzzles/master/310-btc/Screenshot_from_2018-10-10_19-58-51.png)
 
 0.2 SEED:(ref: https://hastebin.com/onotopenes.cpp)
 
@@ -154,6 +162,7 @@ The whole  seed (12 from 0.1 + 12 from @goldfinch  = the 24 words) are the resul
 
 But wait, how to find the seed words ? https://en.bitcoin.it/wiki/Seed_phrase
 
+Ref: https://docs.google.com/document/d/1nUAhlC_n21ZLZcRAHpLw9G--gpk4NUVIJqVp9F68qp4/preview
 
 the hex table hint:
 
@@ -1272,18 +1281,7 @@ STRUCTURE OF PNG FILE: challenge.png
 
 ### 310 BTC
 
-
-
-UPDATES:
-
-- Oct 4 2018: Someone is right on track and moved the funds from the 0.1 BTC address.
-
-A guy called "Lustre" told me he managed to decode it. Good job!
-
-- Oct 9 2018: First successful registration
-
-- Oct 9 2018: The 0.2 BTC wallet was emptied
-
+https://www.blockchain.com/btc/tree/380216200
 
 ## references
 
