@@ -2,6 +2,8 @@
 
 Head over to https://bitcoinchallenge.codes/ for more details.
 
+Reddit update news: https://www.reddit.com/r/Bitcoin/comments/9kq7it/introducing_the_310_btc_bitcoin_challenge/
+
 Work in progress. If you'd like to help, please do. There's a lot of work to be done.
 
 And tips to: 
