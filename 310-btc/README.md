@@ -124,38 +124,63 @@ debris slim immune lock actual tide gas vapor fringe pole flat glance
 0.2 SEED:(ref: https://hastebin.com/onotopenes.cpp)
 
 ```
------------------------------------------------------------------------------
-copied from discord
-
-i took the mirrored curves as forming 5 groups of chars
-L3, 7, 02, 584, 9F
-and figured it might make up the password
-since there's 5 "phrases" i figured it's 5! combinations or 120
-generated all possible and tried them
-it didn't work at first until i reversed 584 to 485
-anyway the password is L379F48502
-i still don't know the intended solution
-but there's a way to link the 5 phrases together in the image that i still don't know
-it's probably important to find this as there is likely still information hidden
-
------
-
-following that unencrypted result you can shift it with the previous date from the first challenge
-to reveal this data
-310 310 310 310 310 310
-1C4 65F 38E 41C 018 70F
-301 78C 2E9 53D 2C5 316
-310 310 310 310 310 310
-
-```
-
-strip the 310s, the result does not correspond to a bip 39 wallet seed, does not decrypt the remaining file, and does not hash for the registration form...
-
-``` 
 cry buyer grain save vault sign lyrics rhythm music fury horror mansion debris slim immune lock actual tide gas vapor fringe pole flat glance
 ```
 
+With both the salted strings decrypted, you can now submit a successful registration hash at https://bitcoinchallenge.codes/register-310/.  The proper submission is to concat seed 1 + alpha salt decrypt + gzip salt decrypt with new lines removed as shown below.
+
+```
+sha256(cry buyer grain save vault sign lyrics rhythm music fury horror mansionBitcoin Challenge ..... 310 BTChttps://bitcoinchallenge.codes/---Well done!Now find something really interesting here:511 B20 332 328 410 530245 651 58F C2C 03A 717401 9AC 36A 53F 4C6 B26332 328 410 530 491 312---310 BTCBitcoin Challenge ..... 310 BTChttps://bitcoinchallenge.codes/---You're either very very close, or working in the wrong direction :)Here you go : Z465/---)
+```
+
+ = 273e2b95648fd3cbad0d7fe3ed820e783c0b12fdbe29b57bfb2d1f243d92b1a5
+
+then successful registration is: 
+
+```
+PERFECT! THIS IS A VERY SPECIAL HASH! :)
+You are getting closer. Very good job!
+
+Thanks for registering!
+```
+
+from the alpha channel:
+
+```
+U2FsdGVkX19Q3I//VCH0U3cVtITZ3ckILJnUcdPX3Gs5qjdF1UjZ3mAftGivtFYD
+N5ZCSkBynnVqBawl4p8wKO0O8zI6D0A1+VEVCUyEvEeNoUfGcS0El9d93vsPxbg7
+D5avufQsScgsk3QEtq9/M4Do32OKFeq00/3NrxWOsMmh3AXmDzuuZ0qmZaI7re16
+FcXIrmPPiQDOHRc7wt0ng6qLiNz7VqESRTdxPOahKFRkWT8sT+Ur2y+2iZ2LEaxN
+M7UZqcPwYgm6FoKOVjnqdeg30R27jc6AoFPyRZ2g8+EJMp3n/pf94oSCLEWkc0os
+jH9DqbM6DUptu3HJbAVwXQ==
+```
+
+then save it to file named 'line310alphachannel.b64';
+
+Use magic number/password: 02L3F95847 and decrypt it.
+
+```
+openssl aes-256-cbc -md md5 -d -in line310alpharedchannel.b64 -out line310alpharedchannel.decrypted -base64 -k 02L3F95847
+```
+
+cat  line310alpharedchannel.decrypted:
+
+```
+Bitcoin Challenge ..... 310 BTC
+https://bitcoinchallenge.codes/
+
+---
+
+You're either very very close, or working in the wrong direction :)
+
+Here you go : Z465/
+
+---
+```
+
 Congrats! 0.2BTC puzzle sovled!
+
+0.31BTC(TBC...)
 
 The whole  seed (12 from 0.1 + 12 from @goldfinch  = the 24 words) are the result of the 0.2 btc address: 1G7qsUy5x9bUd1pRfhVZ7cuB5cMUP4hsfR, and has been transfered: https://blockexplorer.com/address/1G7qsUy5x9bUd1pRfhVZ7cuB5cMUP4hsfR
 
