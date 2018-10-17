@@ -12,6 +12,28 @@ Bitcoin: 1D6tNjbbjNZY54FTzLDGsb4mZ98MDkhLd3
 
 Ethereum: 0xEF83a5fA24ddB0a16cbDF829C0305F3b195ba337
 
+UPDATES:
+
+- Oct 4 2018: Someone is right on track and moved the funds from the 0.1 BTC address.
+
+A guy called "Lustre" told me he managed to decode it. Good job!
+
+- Oct 9 2018: First successful registration
+
+- Oct 9 2018: The 0.2 BTC wallet was emptied. Someone called "aaron" sent an email with proof he solved this one.
+
+- Oct 10 2018: The 310 BTC funds were taken. Solved by "Marc"
+
+- Oct 10 2018: The 0.31 BTC wallet is yet to be solved.
+
+- Oct 11 2018: Reddit locked the tread. For the next challenge I will think about a complete website with integrated commenting system instead.
+
+- Oct 14 2018: The website was getting more visitors on a daily basis. Exponentially. The server even had troubles serving all of them. Until the 310 BTC wallet got cracked. Now my daily visitors chart is very very bearish. I mean, very very very bearish. Down over 90%! If I were to chart the amount of emails on a daily basis it will most certainly look very similar. It feels like there is no interest anymore. I'm puzzled the 0.31 BTC wallet is still unsolved and the remaining coins in the 310 BTC wallet are not even moved days later.....
+
+- Oct 14 2018: In the next weeks I will have someone build a new website and I will start one or a couple smaller challenges ( 0.X BTC ). Those I need to set a baseline in order to try and make sure the next challenge will last a little longer while not making it impossible to solved these things within a reasonable time frame. Keep an eye on the website!
+
+- Oct 16 2018: I am still working through all my emails. I keep getting a lot of hate emails for some reason. Please do not bother sending those becasue I don't even read them completely and surely won't answer.
+
 ![raw image](https://raw.githubusercontent.com/yangboz/bitcoin-puzzles/master/310-btc/challenge.png)
 
 So, Let's watch and learn.
@@ -1298,9 +1320,6 @@ STRUCTURE OF PNG FILE: challenge.png
  3476698 | IDAT  |   12126 | *..1........}.....?...3w..y... | 0x87e7e2e4
  3488836 | IEND  |       0 | 
 ```
-
-
-### 0.2 BTC
 
 ### 0.31 BTC
 
