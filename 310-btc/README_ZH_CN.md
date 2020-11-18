@@ -1,0 +1,1348 @@
+# Introducing the 310 BTC Bitcoin Challenge
+
+Head over to https://bitcoinchallenge.codes/ for more details.
+
+Reddit update news: https://www.reddit.com/r/Bitcoin/comments/9kq7it/introducing_the_310_btc_bitcoin_challenge/
+
+Work in progress. If you'd like to help, please do. There's a lot of work to be done.
+
+And tips to: 
+
+Bitcoin: 1D6tNjbbjNZY54FTzLDGsb4mZ98MDkhLd3
+
+Ethereum: 0xEF83a5fA24ddB0a16cbDF829C0305F3b195ba337
+
+UPDATES:
+
+- Oct 4 2018: Someone is right on track and moved the funds from the 0.1 BTC address.
+
+A guy called "Lustre" told me he managed to decode it. Good job!
+
+- Oct 9 2018: First successful registration
+
+- Oct 9 2018: The 0.2 BTC wallet was emptied. Someone called "aaron" sent an email with proof he solved this one.
+
+- Oct 10 2018: The 310 BTC funds were taken. Solved by "Marc"
+
+- Oct 10 2018: The 0.31 BTC wallet is yet to be solved.
+
+- Oct 11 2018: Reddit locked the tread. For the next challenge I will think about a complete website with integrated commenting system instead.
+
+- Oct 14 2018: The website was getting more visitors on a daily basis. Exponentially. The server even had troubles serving all of them. Until the 310 BTC wallet got cracked. Now my daily visitors chart is very very bearish. I mean, very very very bearish. Down over 90%! If I were to chart the amount of emails on a daily basis it will most certainly look very similar. It feels like there is no interest anymore. I'm puzzled the 0.31 BTC wallet is still unsolved and the remaining coins in the 310 BTC wallet are not even moved days later.....
+
+- Oct 14 2018: In the next weeks I will have someone build a new website and I will start one or a couple smaller challenges ( 0.X BTC ). Those I need to set a baseline in order to try and make sure the next challenge will last a little longer while not making it impossible to solved these things within a reasonable time frame. Keep an eye on the website!
+
+- Oct 16 2018: I am still working through all my emails. I keep getting a lot of hate emails for some reason. Please do not bother sending those becasue I don't even read them completely and surely won't answer.
+
+![raw image](https://raw.githubusercontent.com/yangboz/bitcoin-puzzles/master/310-btc/challenge.png)
+
+So, Let's watch and learn.
+
+## Solutions:
+
+### 0.1 BTC  ：https://bitcointalk.org/index.php?topic=5042285.40
+
+[](https://raw.githubusercontent.com/yangboz/bitcoin-puzzles/master/310-btc/solutions_1_2.jpg)
+
+#### Print out and look
+
+hint: Partly
+
+Ref: http://msn.iecs.fcu.edu.tw/~ccc/profile/publish/ij_paper2/IJ-664.pdf
+
+#### XnView
+
+1.open File, chanllenge.png
+
+2.open Menu, Image >> Map >> Normalize
+
+3.open Menu, Image >> Extract channel >> Alpha
+
+Hidden images:
+
+![hidden images](https://raw.githubusercontent.com/yangboz/bitcoin-puzzles/master/310-btc/Screen%20Shot%202018-10-09%20at%209.17.56%20PM.png)
+
+Enlarge the images part of QRCode:
+
+![hidden image_qr_code](https://raw.githubusercontent.com/yangboz/bitcoin-puzzles/master/310-btc/Screen%20Shot%202018-10-09%20at%209.18.22%20PM.png)
+
+QRCode scanned url: https://bitcoinchallenge.codes/register-310/
+
+4.ciper-text: 
+
+```
+1)According to Pip, one's must resolve 0.1BTC in order to register to the form.
+2)According to Pip, it's not mandatory to register on the website, but it will show you that you are on the good way.
+3)Registering on the website say "Tell me. What is the SHA256 hash of the data you got so far? (SHA256 of all data on a single line)."
+```
+
+Channel talks related: https://discordapp.com/channels/403741830812008449/487515469771964416
+
+https://github.com/eugenekolo/sec-tools.git
+
+https://github.com/paulosolves310/paulosolves310
+
+https://docs.google.com/document/d/1AU-C71rL8EOCYdbxYESDYW9Jmm-zdoyy46X_F9pRjzI/
+
+https://hastebin.com/onotopenes.cpp
+
+from the alpha channel:
+
+```
+U2FsdGVkX19Q3I//VCH0U3cVtITZ3ckILJnUcdPX3Gs5qjdF1UjZ3mAftGivtFYD
+N5ZCSkBynnVqBawl4p8wKO0O8zI6D0A1+VEVCUyEvEeNoUfGcS0El9d93vsPxbg7
+D5avufQsScgsk3QEtq9/M4Do32OKFeq00/3NrxWOsMmh3AXmDzuuZ0qmZaI7re16
+FcXIrmPPiQDOHRc7wt0ng6qLiNz7VqESRTdxPOahKFRkWT8sT+Ur2y+2iZ2LEaxN
+M7UZqcPwYgm6FoKOVjnqdeg30R27jc6AoFPyRZ2g8+EJMp3n/pf94oSCLEWkc0os
+jH9DqbM6DUptu3HJbAVwXQ==
+```
+
+then save it to file named 'line310alpha.b64';
+
+Use magic number/password: L379F48502 and decrypt it.
+
+```
+openssl aes-256-cbc -md md5 -d -in line310alpha.b64 -out line310alpha.decrypted -base64 -k L379F48502
+```
+
+cat  the decrypted result:
+
+```
+Bitcoin Challenge ..... 310 BTC
+https://bitcoinchallenge.codes/
+
+---
+
+Well done!
+Now find something really interesting here:
+
+
+511 B20 332 328 410 530
+245 651 58F C2C 03A 717
+401 9AC 36A 53F 4C6 B26
+332 328 410 530 491 312
+
+
+---
+310 BTC
+```
+
+Congrats! 0.1BTC puzzle sovled!
+
+And decrypted the private seed words,from https://github.com/bitcoin/bips/blob/master/bip-0039/english.txt 
+
+```
+python challenge-0.1btc.py
+```
+
+0.1 SEED:
+
+```
+debris slim immune lock actual tide gas vapor fringe pole flat glance
+```
+
+![](https://raw.githubusercontent.com/yangboz/bitcoin-puzzles/master/310-btc/Screenshot_from_2018-10-10_19-58-51.png)
+
+0.2 SEED:(ref: https://hastebin.com/onotopenes.cpp)
+
+```
+cry buyer grain save vault sign lyrics rhythm music fury horror mansion debris slim immune lock actual tide gas vapor fringe pole flat glance
+```
+
+With both the salted strings decrypted, you can now submit a successful registration hash at https://bitcoinchallenge.codes/register-310/.  The proper submission is to concat seed 1 + alpha salt decrypt + gzip salt decrypt with new lines removed as shown below.
+
+```
+sha256(cry buyer grain save vault sign lyrics rhythm music fury horror mansionBitcoin Challenge ..... 310 BTChttps://bitcoinchallenge.codes/---Well done!Now find something really interesting here:511 B20 332 328 410 530245 651 58F C2C 03A 717401 9AC 36A 53F 4C6 B26332 328 410 530 491 312---310 BTCBitcoin Challenge ..... 310 BTChttps://bitcoinchallenge.codes/---You're either very very close, or working in the wrong direction :)Here you go : Z465/---)
+```
+
+ = 273e2b95648fd3cbad0d7fe3ed820e783c0b12fdbe29b57bfb2d1f243d92b1a5
+
+then successful registration is: 
+
+```
+PERFECT! THIS IS A VERY SPECIAL HASH! :)
+You are getting closer. Very good job!
+
+Thanks for registering!
+```
+
+from the alpha channel:
+
+```
+U2FsdGVkX19Q3I//VCH0U3cVtITZ3ckILJnUcdPX3Gs5qjdF1UjZ3mAftGivtFYD
+N5ZCSkBynnVqBawl4p8wKO0O8zI6D0A1+VEVCUyEvEeNoUfGcS0El9d93vsPxbg7
+D5avufQsScgsk3QEtq9/M4Do32OKFeq00/3NrxWOsMmh3AXmDzuuZ0qmZaI7re16
+FcXIrmPPiQDOHRc7wt0ng6qLiNz7VqESRTdxPOahKFRkWT8sT+Ur2y+2iZ2LEaxN
+M7UZqcPwYgm6FoKOVjnqdeg30R27jc6AoFPyRZ2g8+EJMp3n/pf94oSCLEWkc0os
+jH9DqbM6DUptu3HJbAVwXQ==
+```
+
+then save it to file named 'line310alphachannel.b64';
+
+Use magic number/password: 02L3F95847 and decrypt it.
+
+```
+openssl aes-256-cbc -md md5 -d -in line310alpharedchannel.b64 -out line310alpharedchannel.decrypted -base64 -k 02L3F95847
+```
+
+cat  line310alpharedchannel.decrypted:
+
+```
+Bitcoin Challenge ..... 310 BTC
+https://bitcoinchallenge.codes/
+
+---
+
+You're either very very close, or working in the wrong direction :)
+
+Here you go : Z465/
+
+---
+```
+
+Congrats! 0.2BTC puzzle sovled!
+
+0.31BTC(TBC...)
+
+The whole  seed (12 from 0.1 + 12 from @goldfinch  = the 24 words) are the result of the 0.2 btc address: 1G7qsUy5x9bUd1pRfhVZ7cuB5cMUP4hsfR, and has been transfered: https://blockexplorer.com/address/1G7qsUy5x9bUd1pRfhVZ7cuB5cMUP4hsfR
+
+
+But wait, how to find the seed words ? https://en.bitcoin.it/wiki/Seed_phrase
+
+Ref: https://docs.google.com/document/d/1nUAhlC_n21ZLZcRAHpLw9G--gpk4NUVIJqVp9F68qp4/preview
+
+the hex table hint:
+
+![](https://raw.githubusercontent.com/yangboz/bitcoin-puzzles/master/310-btc/Screen%20Shot%202018-10-10%20at%207.14.45%20PM.png)
+
+Please double check it:
+
+```
+Hex: 511B2033232841053022B0FE52ED0F7A165B52C7E75112F656FC4B
+
+Dicemal: 33365056734088703611062748590304661904804730708037218481712069707
+
+Binary: 
+
+10100010001101100100000001100110010001100101000010000010000010100110000001000
+10101100001111111001010010111011010000111101111010000101100101101101010010110
+0011111100111010100010001001011110110010101101111110001001011
+
+Decimal calculation:
+
+511B2033232841053022B0FE52ED0F7A165B52C7E75112F656FC4B = (5 × 16⁵³) + (1 × 16⁵²) 
++ (1 × 16⁵¹) + (11 × 16⁵⁰) + (2 × 16⁴⁹) + (0 × 16⁴⁸) + (3 × 16⁴⁷) + (3 × 16⁴⁶) 
++ (2 × 16⁴⁵) + (3 × 16⁴⁴) + (2 × 16⁴³) + (8 × 16⁴²) + (4 × 16⁴¹) + (1 × 16⁴⁰) 
++ (0 × 16³⁹) + (5 × 16³⁸) + (3 × 16³⁷) + (0 × 16³⁶) + (2 × 16³⁵) + (2 × 16³⁴) 
++ (11 × 16³³) + (0 × 16³²) + (15 × 16³¹) + (14 × 16³⁰) + (5 × 16²⁹) + (2 × 16²⁸) 
++ (14 × 16²⁷) + (13 × 16²⁶) + (0 × 16²⁵) + (15 × 16²⁴) + (7 × 16²³) + (10 × 16²²) 
++ (1 × 16²¹) + (6 × 16²⁰) + (5 × 16¹⁹) + (11 × 16¹⁸) + (5 × 16¹⁷) + (2 × 16¹⁶) 
++ (12 × 16¹⁵) + (7 × 16¹⁴) + (14 × 16¹³) + (7 × 16¹²) + (5 × 16¹¹) + (1 × 16¹⁰)
++ (1 × 16⁹) + (2 × 16⁸) + (15 × 16⁷) + (6 × 16⁶) + (5 × 16⁵) + (6 × 16⁴) 
++ (15 × 16³) + (12 × 16²) + (4 × 16¹) + (11 × 16⁰) 
+= 33365056734088703611062748590304661904804730708037218481712069707
+```
+
+
+Ref: https://www.rapidtables.com/convert/number/hex-to-decimal.html
+
+#### ImageMagick
+
+Identify: https://imagemagick.org/script/identify.php
+
+```
+identify challenge.png
+
+challenge.png PNG 2944x1912 2944x1912+0+0 8-bit sRGB 3.32722MiB 0.010u 0:00.009
+```
+
+Hint:
+
+```
+identify -verbose challenge.png
+
+Image: challenge.png
+  Format: PNG (Portable Network Graphics)
+  Mime type: image/png
+  Class: DirectClass
+  Geometry: 2944x1912+0+0
+  Units: Undefined
+  Colorspace: sRGB
+  Type: TrueColorAlpha
+  Base type: Undefined
+  Endianess: Undefined
+  Depth: 8-bit
+  Channel depth:
+    Red: 8-bit
+    Green: 8-bit
+    Blue: 8-bit
+    Alpha: 8-bit
+  Channel statistics:
+    Pixels: 5628928
+    Red:
+      min: 0  (0)
+      max: 255 (1)
+      mean: 127.212 (0.498872)
+      standard deviation: 116.65 (0.457452)
+      kurtosis: -1.93358
+      skewness: 0.00483842
+      entropy: 0.610032
+    Green:
+      min: 0  (0)
+      max: 255 (1)
+      mean: 127.213 (0.498873)
+      standard deviation: 116.65 (0.457453)
+      kurtosis: -1.93358
+      skewness: 0.00483712
+      entropy: 0.609924
+    Blue:
+      min: 0  (0)
+      max: 255 (1)
+      mean: 127.213 (0.498873)
+      standard deviation: 116.65 (0.457453)
+      kurtosis: -1.93358
+      skewness: 0.00483712
+      entropy: 0.609924
+    Alpha:
+      min: 253  (0.992157)
+      max: 255 (1)
+      mean: 254.997 (0.99999)
+      standard deviation: 0.0652841 (0.000256016)
+      kurtosis: -205318
+      skewness: -2.61205
+      entropy: 0.0131929
+  Image statistics:
+    Overall:
+      min: 0  (0)
+      max: 255 (1)
+      mean: 159.159 (0.624152)
+      standard deviation: 87.5041 (0.343153)
+      kurtosis: -1.68353
+      skewness: -0.508261
+      entropy: 0.460768
+  Colors: 749
+  Histogram:
+   1418293: (  0,  0,  0,255) #000000FF black
+       373: (  0,  0,  0,253) #000000FD srgba(0,0,0,0.992157)
+       373: (  0,  0,  0,254) #000000FE srgba(0,0,0,0.996078)
+       102: (  1,  0,  0,254) #010000FE srgba(1,0,0,0.996078)
+        35: (  1,  0,  0,253) #010000FD srgba(1,0,0,0.992157)
+     26381: (  1,  1,  1,255) #010101FF srgba(1,1,1,1)
+         9: (  1,  1,  1,254) #010101FE srgba(1,1,1,0.996078)
+         3: (  1,  1,  1,253) #010101FD srgba(1,1,1,0.992157)
+         1: (  2,  1,  1,253) #020101FD srgba(2,1,1,0.992157)
+     29163: (  2,  2,  2,255) #020202FF srgba(2,2,2,1)
+         8: (  2,  2,  2,253) #020202FD srgba(2,2,2,0.992157)
+         7: (  2,  2,  2,254) #020202FE srgba(2,2,2,0.996078)
+     45480: (  3,  3,  3,255) #030303FF grey1
+        18: (  3,  3,  3,253) #030303FD srgba(3,3,3,0.992157)
+        12: (  3,  3,  3,254) #030303FE srgba(3,3,3,0.996078)
+         9: (  4,  3,  3,253) #040303FD srgba(4,3,3,0.992157)
+         2: (  4,  3,  3,255) #040303FF srgba(4,3,3,1)
+         1: (  4,  3,  3,254) #040303FE srgba(4,3,3,0.996078)
+     21617: (  4,  4,  4,255) #040404FF srgba(4,4,4,1)
+         6: (  4,  4,  4,253) #040404FD srgba(4,4,4,0.992157)
+         6: (  4,  4,  4,254) #040404FE srgba(4,4,4,0.996078)
+         6: (  5,  4,  4,254) #050404FE srgba(5,4,4,0.996078)
+         2: (  5,  4,  4,253) #050404FD srgba(5,4,4,0.992157)
+     42717: (  5,  5,  5,255) #050505FF grey2
+        14: (  5,  5,  5,254) #050505FE srgba(5,5,5,0.996078)
+        11: (  5,  5,  5,253) #050505FD srgba(5,5,5,0.992157)
+         6: (  6,  5,  5,253) #060505FD srgba(6,5,5,0.992157)
+         4: (  6,  5,  5,254) #060505FE srgba(6,5,5,0.996078)
+         4: (  6,  5,  5,255) #060505FF srgba(6,5,5,1)
+     32585: (  6,  6,  6,255) #060606FF srgba(6,6,6,1)
+         6: (  6,  6,  6,253) #060606FD srgba(6,6,6,0.992157)
+         5: (  6,  6,  6,254) #060606FE srgba(6,6,6,0.996078)
+         4: (  7,  6,  6,253) #070606FD srgba(7,6,6,0.992157)
+         2: (  7,  6,  6,254) #070606FE srgba(7,6,6,0.996078)
+     23145: (  7,  7,  7,255) #070707FF srgba(7,7,7,1)
+        12: (  7,  7,  7,254) #070707FE srgba(7,7,7,0.996078)
+         6: (  7,  7,  7,253) #070707FD srgba(7,7,7,0.992157)
+         5: (  8,  7,  7,253) #080707FD srgba(8,7,7,0.992157)
+         2: (  8,  7,  7,255) #080707FF srgba(8,7,7,1)
+         1: (  8,  7,  7,254) #080707FE srgba(8,7,7,0.996078)
+     54328: (  8,  8,  8,255) #080808FF grey3
+        13: (  8,  8,  8,254) #080808FE srgba(8,8,8,0.996078)
+        13: (  8,  8,  8,253) #080808FD srgba(8,8,8,0.992157)
+         2: (  9,  8,  8,254) #090808FE srgba(9,8,8,0.996078)
+     26093: (  9,  9,  9,255) #090909FF srgba(9,9,9,1)
+        10: (  9,  9,  9,253) #090909FD srgba(9,9,9,0.992157)
+         9: (  9,  9,  9,254) #090909FE srgba(9,9,9,0.996078)
+         2: ( 10,  9,  9,253) #0A0909FD srgba(10,9,9,0.992157)
+         1: ( 10,  9,  9,254) #0A0909FE srgba(10,9,9,0.996078)
+     29938: ( 10, 10, 10,255) #0A0A0AFF grey4
+        11: ( 10, 10, 10,254) #0A0A0AFE srgba(10,10,10,0.996078)
+         3: ( 10, 10, 10,253) #0A0A0AFD srgba(10,10,10,0.992157)
+     46869: ( 11, 11, 11,255) #0B0B0BFF srgba(11,11,11,1)
+        10: ( 11, 11, 11,253) #0B0B0BFD srgba(11,11,11,0.992157)
+        10: ( 11, 11, 11,254) #0B0B0BFE srgba(11,11,11,0.996078)
+     22714: ( 12, 12, 12,255) #0C0C0CFF srgba(12,12,12,1)
+        17: ( 12, 12, 12,253) #0C0C0CFD srgba(12,12,12,0.992157)
+         5: ( 12, 12, 12,254) #0C0C0CFE srgba(12,12,12,0.996078)
+         5: ( 13, 12, 12,254) #0D0C0CFE srgba(13,12,12,0.996078)
+         1: ( 13, 12, 12,253) #0D0C0CFD srgba(13,12,12,0.992157)
+     43948: ( 13, 13, 13,255) #0D0D0DFF grey5
+        16: ( 13, 13, 13,254) #0D0D0DFE srgba(13,13,13,0.996078)
+        10: ( 13, 13, 13,253) #0D0D0DFD srgba(13,13,13,0.992157)
+         4: ( 14, 13, 13,253) #0E0D0DFD srgba(14,13,13,0.992157)
+         4: ( 14, 13, 13,255) #0E0D0DFF srgba(14,13,13,1)
+         2: ( 14, 13, 13,254) #0E0D0DFE srgba(14,13,13,0.996078)
+     35199: ( 14, 14, 14,255) #0E0E0EFF srgba(14,14,14,1)
+        15: ( 14, 14, 14,254) #0E0E0EFE srgba(14,14,14,0.996078)
+         7: ( 14, 14, 14,253) #0E0E0EFD srgba(14,14,14,0.992157)
+         3: ( 15, 14, 14,254) #0F0E0EFE srgba(15,14,14,0.996078)
+     19837: ( 15, 15, 15,255) #0F0F0FFF grey6
+         4: ( 15, 15, 15,254) #0F0F0FFE srgba(15,15,15,0.996078)
+         3: ( 15, 15, 15,253) #0F0F0FFD srgba(15,15,15,0.992157)
+     48659: ( 16, 16, 16,255) #101010FF srgba(16,16,16,1)
+        15: ( 16, 16, 16,253) #101010FD srgba(16,16,16,0.992157)
+         7: ( 16, 16, 16,254) #101010FE srgba(16,16,16,0.996078)
+         3: ( 17, 16, 16,254) #111010FE srgba(17,16,16,0.996078)
+         1: ( 17, 16, 16,253) #111010FD srgba(17,16,16,0.992157)
+     26449: ( 17, 17, 17,255) #111111FF srgba(17,17,17,1)
+        19: ( 17, 17, 17,254) #111111FE srgba(17,17,17,0.996078)
+         8: ( 17, 17, 17,253) #111111FD srgba(17,17,17,0.992157)
+         4: ( 18, 17, 17,253) #121111FD srgba(18,17,17,0.992157)
+         2: ( 18, 17, 17,255) #121111FF srgba(18,17,17,1)
+         1: ( 18, 17, 17,254) #121111FE srgba(18,17,17,0.996078)
+     26682: ( 18, 18, 18,255) #121212FF grey7
+         8: ( 18, 18, 18,254) #121212FE srgba(18,18,18,0.996078)
+         2: ( 18, 18, 18,253) #121212FD srgba(18,18,18,0.992157)
+     46068: ( 19, 19, 19,255) #131313FF srgba(19,19,19,1)
+        16: ( 19, 19, 19,254) #131313FE srgba(19,19,19,0.996078)
+         9: ( 19, 19, 19,253) #131313FD srgba(19,19,19,0.992157)
+        11: ( 20, 19, 19,253) #141313FD srgba(20,19,19,0.992157)
+         5: ( 20, 19, 19,255) #141313FF srgba(20,19,19,1)
+         4: ( 20, 19, 19,254) #141313FE srgba(20,19,19,0.996078)
+     16577: ( 20, 20, 20,255) #141414FF grey8
+         7: ( 20, 20, 20,254) #141414FE srgba(20,20,20,0.996078)
+         5: ( 20, 20, 20,253) #141414FD srgba(20,20,20,0.992157)
+         6: ( 21, 20, 20,254) #151414FE srgba(21,20,20,0.996078)
+         1: ( 21, 20, 20,253) #151414FD srgba(21,20,20,0.992157)
+     34356: ( 21, 21, 21,255) #151515FF srgba(21,21,21,1)
+        18: ( 21, 21, 21,254) #151515FE srgba(21,21,21,0.996078)
+         3: ( 21, 21, 21,253) #151515FD srgba(21,21,21,0.992157)
+         4: ( 22, 21, 21,253) #161515FD srgba(22,21,21,0.992157)
+         1: ( 22, 21, 21,255) #161515FF srgba(22,21,21,1)
+     30329: ( 22, 22, 22,255) #161616FF srgba(22,22,22,1)
+         7: ( 22, 22, 22,253) #161616FD srgba(22,22,22,0.992157)
+         7: ( 22, 22, 22,254) #161616FE srgba(22,22,22,0.996078)
+         3: ( 23, 22, 22,253) #171616FD srgba(23,22,22,0.992157)
+         3: ( 23, 22, 22,254) #171616FE srgba(23,22,22,0.996078)
+     18756: ( 23, 23, 23,255) #171717FF grey9
+         8: ( 23, 23, 23,254) #171717FE srgba(23,23,23,0.996078)
+         4: ( 23, 23, 23,253) #171717FD srgba(23,23,23,0.992157)
+     40955: ( 24, 24, 24,255) #181818FF srgba(24,24,24,1)
+        12: ( 24, 24, 24,254) #181818FE srgba(24,24,24,0.996078)
+         5: ( 24, 24, 24,253) #181818FD srgba(24,24,24,0.992157)
+     23144: ( 25, 25, 25,255) #191919FF srgba(25,25,25,1)
+         5: ( 25, 25, 25,254) #191919FE srgba(25,25,25,0.996078)
+         3: ( 25, 25, 25,253) #191919FD srgba(25,25,25,0.992157)
+        10: ( 26, 25, 25,253) #1A1919FD srgba(26,25,25,0.992157)
+         2: ( 26, 25, 25,254) #1A1919FE srgba(26,25,25,0.996078)
+         2: ( 26, 25, 25,255) #1A1919FF srgba(26,25,25,1)
+     25065: ( 26, 26, 26,255) #1A1A1AFF grey10
+         8: ( 26, 26, 26,254) #1A1A1AFE srgba(26,26,26,0.996078)
+         2: ( 26, 26, 26,253) #1A1A1AFD srgba(26,26,26,0.992157)
+         6: ( 27, 26, 26,254) #1B1A1AFE srgba(27,26,26,0.996078)
+     36607: ( 27, 27, 27,255) #1B1B1BFF srgba(27,27,27,1)
+        19: ( 27, 27, 27,254) #1B1B1BFE srgba(27,27,27,0.996078)
+         5: ( 27, 27, 27,253) #1B1B1BFD srgba(27,27,27,0.992157)
+         4: ( 28, 27, 27,253) #1C1B1BFD srgba(28,27,27,0.992157)
+         3: ( 28, 27, 27,254) #1C1B1BFE srgba(28,27,27,0.996078)
+         2: ( 28, 27, 27,255) #1C1B1BFF srgba(28,27,27,1)
+     21811: ( 28, 28, 28,255) #1C1C1CFF grey11
+        14: ( 28, 28, 28,253) #1C1C1CFD srgba(28,28,28,0.992157)
+        11: ( 28, 28, 28,254) #1C1C1CFE srgba(28,28,28,0.996078)
+         9: ( 29, 28, 28,254) #1D1C1CFE srgba(29,28,28,0.996078)
+         6: ( 29, 28, 28,253) #1D1C1CFD srgba(29,28,28,0.992157)
+     27552: ( 29, 29, 29,255) #1D1D1DFF srgba(29,29,29,1)
+        11: ( 29, 29, 29,253) #1D1D1DFD srgba(29,29,29,0.992157)
+         4: ( 29, 29, 29,254) #1D1D1DFE srgba(29,29,29,0.996078)
+     27426: ( 30, 30, 30,255) #1E1E1EFF srgba(30,30,30,1)
+        10: ( 30, 30, 30,254) #1E1E1EFE srgba(30,30,30,0.996078)
+         5: ( 30, 30, 30,253) #1E1E1EFD srgba(30,30,30,0.992157)
+         1: ( 30, 31, 31,255) #1E1F1FFF srgba(30,31,31,1)
+         3: ( 31, 30, 30,254) #1F1E1EFE srgba(31,30,30,0.996078)
+     19940: ( 31, 31, 31,255) #1F1F1FFF grey12
+         7: ( 31, 31, 31,253) #1F1F1FFD srgba(31,31,31,0.992157)
+         6: ( 31, 31, 31,254) #1F1F1FFE srgba(31,31,31,0.996078)
+     36876: ( 32, 32, 32,255) #202020FF srgba(32,32,32,1)
+        19: ( 32, 32, 32,253) #202020FD srgba(32,32,32,0.992157)
+        12: ( 32, 32, 32,254) #202020FE srgba(32,32,32,0.996078)
+         1: ( 32, 33, 33,255) #202121FF srgba(32,33,33,1)
+        13: ( 33, 32, 32,254) #212020FE srgba(33,32,32,0.996078)
+         2: ( 33, 32, 32,253) #212020FD srgba(33,32,32,0.992157)
+     16505: ( 33, 33, 33,255) #212121FF grey13
+         7: ( 33, 33, 33,254) #212121FE srgba(33,33,33,0.996078)
+         1: ( 33, 33, 33,253) #212121FD srgba(33,33,33,0.992157)
+         2: ( 34, 33, 33,253) #222121FD srgba(34,33,33,0.992157)
+         1: ( 34, 33, 33,255) #222121FF srgba(34,33,33,1)
+     19683: ( 34, 34, 34,255) #222222FF srgba(34,34,34,1)
+         7: ( 34, 34, 34,254) #222222FE srgba(34,34,34,0.996078)
+         2: ( 34, 34, 34,253) #222222FD srgba(34,34,34,0.992157)
+     27827: ( 35, 35, 35,255) #232323FF srgba(35,35,35,1)
+        10: ( 35, 35, 35,253) #232323FD srgba(35,35,35,0.992157)
+         6: ( 35, 35, 35,254) #232323FE srgba(35,35,35,0.996078)
+         1: ( 36, 35, 35,253) #242323FD srgba(36,35,35,0.992157)
+         1: ( 36, 35, 35,254) #242323FE srgba(36,35,35,0.996078)
+     16199: ( 36, 36, 36,255) #242424FF grey14
+         4: ( 36, 36, 36,254) #242424FE srgba(36,36,36,0.996078)
+         1: ( 36, 36, 36,253) #242424FD srgba(36,36,36,0.992157)
+     22208: ( 37, 37, 37,255) #252525FF srgba(37,37,37,1)
+        10: ( 37, 37, 37,254) #252525FE srgba(37,37,37,0.996078)
+         8: ( 37, 37, 37,253) #252525FD srgba(37,37,37,0.992157)
+         7: ( 38, 37, 37,253) #262525FD srgba(38,37,37,0.992157)
+         3: ( 38, 37, 37,255) #262525FF srgba(38,37,37,1)
+     20386: ( 38, 38, 38,255) #262626FF grey15
+         7: ( 38, 38, 38,254) #262626FE srgba(38,38,38,0.996078)
+         3: ( 38, 38, 38,253) #262626FD srgba(38,38,38,0.992157)
+     12909: ( 39, 39, 39,255) #272727FF srgba(39,39,39,1)
+         9: ( 39, 39, 39,254) #272727FE srgba(39,39,39,0.996078)
+         5: ( 39, 39, 39,253) #272727FD srgba(39,39,39,0.992157)
+         1: ( 39, 40, 40,255) #272828FF srgba(39,40,40,1)
+         4: ( 40, 39, 39,253) #282727FD srgba(40,39,39,0.992157)
+         2: ( 40, 39, 39,254) #282727FE srgba(40,39,39,0.996078)
+     23171: ( 40, 40, 40,255) #282828FF srgba(40,40,40,1)
+         6: ( 40, 40, 40,253) #282828FD srgba(40,40,40,0.992157)
+         5: ( 40, 40, 40,254) #282828FE srgba(40,40,40,0.996078)
+         5: ( 41, 40, 40,254) #292828FE srgba(41,40,40,0.996078)
+         2: ( 41, 40, 40,253) #292828FD srgba(41,40,40,0.992157)
+     14144: ( 41, 41, 41,255) #292929FF grey16
+         6: ( 41, 41, 41,254) #292929FE srgba(41,41,41,0.996078)
+         3: ( 41, 41, 41,253) #292929FD srgba(41,41,41,0.992157)
+     12501: ( 42, 42, 42,255) #2A2A2AFF srgba(42,42,42,1)
+         6: ( 42, 42, 42,254) #2A2A2AFE srgba(42,42,42,0.996078)
+         3: ( 42, 42, 42,253) #2A2A2AFD srgba(42,42,42,0.992157)
+     24105: ( 43, 43, 43,255) #2B2B2BFF grey17
+         9: ( 43, 43, 43,254) #2B2B2BFE srgba(43,43,43,0.996078)
+         9: ( 43, 43, 43,253) #2B2B2BFD srgba(43,43,43,0.992157)
+      8185: ( 44, 44, 44,255) #2C2C2CFF srgba(44,44,44,1)
+         2: ( 44, 44, 44,254) #2C2C2CFE srgba(44,44,44,0.996078)
+         1: ( 44, 44, 44,253) #2C2C2CFD srgba(44,44,44,0.992157)
+     14761: ( 45, 45, 45,255) #2D2D2DFF srgba(45,45,45,1)
+        11: ( 45, 45, 45,254) #2D2D2DFE srgba(45,45,45,0.996078)
+         5: ( 45, 45, 45,253) #2D2D2DFD srgba(45,45,45,0.992157)
+         6: ( 46, 45, 45,253) #2E2D2DFD srgba(46,45,45,0.992157)
+         2: ( 46, 45, 45,255) #2E2D2DFF srgba(46,45,45,1)
+         1: ( 46, 45, 45,254) #2E2D2DFE srgba(46,45,45,0.996078)
+     13599: ( 46, 46, 46,255) #2E2E2EFF grey18
+         7: ( 46, 46, 46,253) #2E2E2EFD srgba(46,46,46,0.992157)
+         4: ( 46, 46, 46,254) #2E2E2EFE srgba(46,46,46,0.996078)
+         7: ( 47, 46, 46,254) #2F2E2EFE srgba(47,46,46,0.996078)
+      9955: ( 47, 47, 47,255) #2F2F2FFF srgba(47,47,47,1)
+         4: ( 47, 47, 47,253) #2F2F2FFD srgba(47,47,47,0.992157)
+         4: ( 47, 47, 47,254) #2F2F2FFE srgba(47,47,47,0.996078)
+         1: ( 47, 48, 48,255) #2F3030FF srgba(47,48,48,1)
+     13180: ( 48, 48, 48,255) #303030FF grey19
+         4: ( 48, 48, 48,253) #303030FD srgba(48,48,48,0.992157)
+         1: ( 48, 48, 48,254) #303030FE srgba(48,48,48,0.996078)
+      6348: ( 49, 49, 49,255) #313131FF srgba(49,49,49,1)
+         2: ( 49, 49, 49,253) #313131FD srgba(49,49,49,0.992157)
+      9925: ( 50, 50, 50,255) #323232FF srgba(50,50,50,1)
+         9: ( 50, 50, 50,254) #323232FE srgba(50,50,50,0.996078)
+         3: ( 50, 50, 50,253) #323232FD srgba(50,50,50,0.992157)
+         1: ( 50, 51, 51,255) #323333FF srgba(50,51,51,1)
+     14193: ( 51, 51, 51,255) #333333FF grey20
+         4: ( 51, 51, 51,253) #333333FD srgba(51,51,51,0.992157)
+         3: ( 51, 51, 51,254) #333333FE srgba(51,51,51,0.996078)
+         2: ( 51, 52, 52,255) #333434FF srgba(51,52,52,1)
+      4181: ( 52, 52, 52,255) #343434FF srgba(52,52,52,1)
+         1: ( 52, 53, 53,255) #343535FF srgba(52,53,53,1)
+      9019: ( 53, 53, 53,255) #353535FF srgba(53,53,53,1)
+         4: ( 53, 53, 53,254) #353535FE srgba(53,53,53,0.996078)
+         2: ( 53, 53, 53,253) #353535FD srgba(53,53,53,0.992157)
+      5736: ( 54, 54, 54,255) #363636FF grey21
+         1: ( 54, 54, 54,254) #363636FE srgba(54,54,54,0.996078)
+         1: ( 54, 54, 54,253) #363636FD srgba(54,54,54,0.992157)
+      4394: ( 55, 55, 55,255) #373737FF srgba(55,55,55,1)
+         1: ( 55, 55, 55,253) #373737FD srgba(55,55,55,0.992157)
+      8378: ( 56, 56, 56,255) #383838FF grey22
+         6: ( 56, 56, 56,253) #383838FD srgba(56,56,56,0.992157)
+         2: ( 56, 56, 56,254) #383838FE srgba(56,56,56,0.996078)
+      4882: ( 57, 57, 57,255) #393939FF srgba(57,57,57,1)
+         2: ( 57, 57, 57,254) #393939FE srgba(57,57,57,0.996078)
+      3667: ( 58, 58, 58,255) #3A3A3AFF srgba(58,58,58,1)
+         3: ( 58, 58, 58,254) #3A3A3AFE srgba(58,58,58,0.996078)
+         1: ( 58, 58, 58,253) #3A3A3AFD srgba(58,58,58,0.992157)
+      6626: ( 59, 59, 59,255) #3B3B3BFF grey23
+         1: ( 59, 59, 59,254) #3B3B3BFE srgba(59,59,59,0.996078)
+      3145: ( 60, 60, 60,255) #3C3C3CFF srgba(60,60,60,1)
+         1: ( 60, 60, 60,253) #3C3C3CFD srgba(60,60,60,0.992157)
+      5023: ( 61, 61, 61,255) #3D3D3DFF grey24
+         2: ( 61, 61, 61,254) #3D3D3DFE srgba(61,61,61,0.996078)
+         1: ( 61, 61, 61,253) #3D3D3DFD srgba(61,61,61,0.992157)
+      3798: ( 62, 62, 62,255) #3E3E3EFF srgba(62,62,62,1)
+         2: ( 62, 62, 62,254) #3E3E3EFE srgba(62,62,62,0.996078)
+         1: ( 62, 62, 62,253) #3E3E3EFD srgba(62,62,62,0.992157)
+      2961: ( 63, 63, 63,255) #3F3F3FFF srgba(63,63,63,1)
+         1: ( 63, 64, 64,255) #3F4040FF srgba(63,64,64,1)
+      4094: ( 64, 64, 64,255) #404040FF grey25
+         1: ( 64, 64, 64,253) #404040FD srgba(64,64,64,0.992157)
+      2581: ( 65, 65, 65,255) #414141FF srgba(65,65,65,1)
+         1: ( 65, 65, 65,253) #414141FD srgba(65,65,65,0.992157)
+         1: ( 65, 65, 65,254) #414141FE srgba(65,65,65,0.996078)
+         1: ( 65, 66, 66,255) #414242FF srgba(65,66,66,1)
+      2895: ( 66, 66, 66,255) #424242FF grey26
+         1: ( 66, 66, 66,253) #424242FD srgba(66,66,66,0.992157)
+         1: ( 66, 66, 66,254) #424242FE srgba(66,66,66,0.996078)
+      3954: ( 67, 67, 67,255) #434343FF srgba(67,67,67,1)
+         2: ( 67, 67, 67,254) #434343FE srgba(67,67,67,0.996078)
+      1303: ( 68, 68, 68,255) #444444FF srgba(68,68,68,1)
+      2912: ( 69, 69, 69,255) #454545FF grey27
+         1: ( 69, 69, 69,254) #454545FE srgba(69,69,69,0.996078)
+      1592: ( 70, 70, 70,255) #464646FF srgba(70,70,70,1)
+      1935: ( 71, 71, 71,255) #474747FF grey28
+         2: ( 71, 71, 71,254) #474747FE srgba(71,71,71,0.996078)
+      1451: ( 72, 72, 72,255) #484848FF srgba(72,72,72,1)
+         1: ( 72, 72, 72,253) #484848FD srgba(72,72,72,0.992157)
+       668: ( 73, 73, 73,255) #494949FF srgba(73,73,73,1)
+         1: ( 73, 73, 73,253) #494949FD srgba(73,73,73,0.992157)
+       905: ( 74, 74, 74,255) #4A4A4AFF grey29
+         1: ( 74, 74, 74,253) #4A4A4AFD srgba(74,74,74,0.992157)
+       905: ( 75, 75, 75,255) #4B4B4BFF srgba(75,75,75,1)
+       149: ( 76, 76, 76,255) #4C4C4CFF srgba(76,76,76,1)
+      1043: ( 77, 77, 77,255) #4D4D4DFF grey30
+         1: ( 77, 77, 77,254) #4D4D4DFE srgba(77,77,77,0.996078)
+         1: ( 77, 78, 78,255) #4D4E4EFF srgba(77,78,78,1)
+       130: ( 78, 78, 78,255) #4E4E4EFF srgba(78,78,78,1)
+       123: ( 79, 79, 79,255) #4F4F4FFF grey31
+       158: ( 80, 80, 80,255) #505050FF srgba(80,80,80,1)
+       119: ( 81, 81, 81,255) #515151FF srgba(81,81,81,1)
+       145: ( 82, 82, 82,255) #525252FF grey32
+       137: ( 83, 83, 83,255) #535353FF srgba(83,83,83,1)
+       302: ( 84, 84, 84,255) #545454FF grey33
+       120: ( 85, 85, 85,255) #555555FF srgba(85,85,85,1)
+       134: ( 86, 86, 86,255) #565656FF srgba(86,86,86,1)
+         3: ( 86, 87, 87,255) #565757FF srgba(86,87,87,1)
+       128: ( 87, 87, 87,255) #575757FF grey34
+       107: ( 88, 88, 88,255) #585858FF srgba(88,88,88,1)
+         1: ( 88, 89, 89,255) #585959FF srgba(88,89,89,1)
+       121: ( 89, 89, 89,255) #595959FF grey35
+       123: ( 90, 90, 90,255) #5A5A5AFF srgba(90,90,90,1)
+       121: ( 91, 91, 91,255) #5B5B5BFF srgba(91,91,91,1)
+       148: ( 92, 92, 92,255) #5C5C5CFF grey36
+         1: ( 92, 93, 93,255) #5C5D5DFF srgba(92,93,93,1)
+       106: ( 93, 93, 93,255) #5D5D5DFF srgba(93,93,93,1)
+         1: ( 93, 94, 94,255) #5D5E5EFF srgba(93,94,94,1)
+       115: ( 94, 94, 94,255) #5E5E5EFF grey37
+        99: ( 95, 95, 95,255) #5F5F5FFF srgba(95,95,95,1)
+         2: ( 95, 96, 96,255) #5F6060FF srgba(95,96,96,1)
+       195: ( 96, 96, 96,255) #606060FF srgba(96,96,96,1)
+       114: ( 97, 97, 97,255) #616161FF grey38
+       122: ( 98, 98, 98,255) #626262FF srgba(98,98,98,1)
+       118: ( 99, 99, 99,255) #636363FF grey39
+       114: (100,100,100,255) #646464FF srgba(100,100,100,1)
+       126: (101,101,101,255) #656565FF srgba(101,101,101,1)
+       108: (102,102,102,255) #666666FF grey40
+         2: (102,103,103,255) #666767FF srgba(102,103,103,1)
+       572: (103,103,103,255) #676767FF srgba(103,103,103,1)
+         1: (103,104,104,255) #676868FF srgba(103,104,104,1)
+       118: (104,104,104,255) #686868FF srgba(104,104,104,1)
+        81: (105,105,105,255) #696969FF DimGray
+         2: (105,106,106,255) #696A6AFF srgba(105,106,106,1)
+        77: (106,106,106,255) #6A6A6AFF srgba(106,106,106,1)
+        95: (107,107,107,255) #6B6B6BFF grey42
+         1: (107,108,108,255) #6B6C6CFF srgba(107,108,108,1)
+       114: (108,108,108,255) #6C6C6CFF srgba(108,108,108,1)
+         2: (108,109,109,255) #6C6D6DFF srgba(108,109,109,1)
+        87: (109,109,109,255) #6D6D6DFF srgba(109,109,109,1)
+         1: (109,110,110,255) #6D6E6EFF srgba(109,110,110,1)
+       110: (110,110,110,255) #6E6E6EFF grey43
+         1: (110,111,111,255) #6E6F6FFF srgba(110,111,111,1)
+        82: (111,111,111,255) #6F6F6FFF srgba(111,111,111,1)
+         1: (111,112,112,255) #6F7070FF srgba(111,112,112,1)
+       140: (112,112,112,255) #707070FF grey44
+         2: (112,113,113,255) #707171FF srgba(112,113,113,1)
+       104: (113,113,113,255) #717171FF srgba(113,113,113,1)
+         1: (113,114,114,255) #717272FF srgba(113,114,114,1)
+        87: (114,114,114,255) #727272FF srgba(114,114,114,1)
+        76: (115,115,115,255) #737373FF grey45
+         3: (115,116,116,255) #737474FF srgba(115,116,116,1)
+       102: (116,116,116,255) #747474FF srgba(116,116,116,1)
+         4: (116,117,117,255) #747575FF srgba(116,117,117,1)
+        80: (117,117,117,255) #757575FF grey46
+         2: (117,118,118,255) #757676FF srgba(117,118,118,1)
+        78: (118,118,118,255) #767676FF srgba(118,118,118,1)
+         1: (118,119,119,255) #767777FF srgba(118,119,119,1)
+        89: (119,119,119,255) #777777FF srgba(119,119,119,1)
+         7: (119,120,120,255) #777878FF srgba(119,120,120,1)
+       261: (120,120,120,255) #787878FF grey47
+         3: (120,121,121,255) #787979FF srgba(120,121,121,1)
+        84: (121,121,121,255) #797979FF srgba(121,121,121,1)
+         4: (121,122,122,255) #797A7AFF srgba(121,122,122,1)
+       102: (122,122,122,255) #7A7A7AFF grey48
+         2: (122,123,123,255) #7A7B7BFF srgba(122,123,123,1)
+        90: (123,123,123,255) #7B7B7BFF srgba(123,123,123,1)
+         4: (123,124,124,255) #7B7C7CFF srgba(123,124,124,1)
+        87: (124,124,124,255) #7C7C7CFF srgba(124,124,124,1)
+         6: (124,125,125,255) #7C7D7DFF srgba(124,125,125,1)
+        75: (125,125,125,255) #7D7D7DFF grey49
+         7: (125,126,126,255) #7D7E7EFF srgba(125,126,126,1)
+       104: (126,126,126,255) #7E7E7EFF gray
+       164: (127,127,127,255) #7F7F7FFF grey50
+        11: (127,128,128,255) #7F8080FF srgba(127,128,128,1)
+       226: (128,128,128,255) #808080FF fractal
+         5: (128,129,129,255) #808181FF srgba(128,129,129,1)
+        78: (129,129,129,255) #818181FF srgba(129,129,129,1)
+         5: (129,130,130,255) #818282FF srgba(129,130,130,1)
+        71: (130,130,130,255) #828282FF grey51
+        13: (130,131,131,255) #828383FF srgba(130,131,131,1)
+        81: (131,131,131,255) #838383FF srgba(131,131,131,1)
+        12: (131,132,132,255) #838484FF srgba(131,132,132,1)
+        88: (132,132,132,255) #848484FF srgba(132,132,132,1)
+        16: (132,133,133,255) #848585FF srgba(132,133,133,1)
+       101: (133,133,133,255) #858585FF grey52
+        12: (133,134,134,255) #858686FF srgba(133,134,134,1)
+        97: (134,134,134,255) #868686FF srgba(134,134,134,1)
+         7: (134,135,135,255) #868787FF srgba(134,135,135,1)
+       219: (135,135,135,255) #878787FF grey53
+        10: (135,136,136,255) #878888FF srgba(135,136,136,1)
+        89: (136,136,136,255) #888888FF srgba(136,136,136,1)
+        11: (136,137,137,255) #888989FF srgba(136,137,137,1)
+        81: (137,137,137,255) #898989FF srgba(137,137,137,1)
+         5: (137,138,138,255) #898A8AFF srgba(137,138,138,1)
+        90: (138,138,138,255) #8A8A8AFF grey54
+        23: (138,139,139,255) #8A8B8BFF srgba(138,139,139,1)
+       111: (139,139,139,255) #8B8B8BFF srgba(139,139,139,1)
+         5: (139,140,140,255) #8B8C8CFF srgba(139,140,140,1)
+        89: (140,140,140,255) #8C8C8CFF grey55
+        11: (140,141,141,255) #8C8D8DFF srgba(140,141,141,1)
+       101: (141,141,141,255) #8D8D8DFF srgba(141,141,141,1)
+        31: (141,142,142,255) #8D8E8EFF srgba(141,142,142,1)
+        92: (142,142,142,255) #8E8E8EFF srgba(142,142,142,1)
+         1: (142,143,143,255) #8E8F8FFF srgba(142,143,143,1)
+       126: (143,143,143,255) #8F8F8FFF grey56
+        18: (143,144,144,255) #8F9090FF srgba(143,144,144,1)
+       128: (144,144,144,255) #909090FF srgba(144,144,144,1)
+         3: (144,145,145,255) #909191FF srgba(144,145,145,1)
+        88: (145,145,145,255) #919191FF grey57
+        15: (145,146,146,255) #919292FF srgba(145,146,146,1)
+        97: (146,146,146,255) #929292FF srgba(146,146,146,1)
+        22: (146,147,147,255) #929393FF srgba(146,147,147,1)
+        83: (147,147,147,255) #939393FF srgba(147,147,147,1)
+         1: (147,148,148,255) #939494FF srgba(147,148,148,1)
+       103: (148,148,148,255) #949494FF grey58
+        13: (148,149,149,255) #949595FF srgba(148,149,149,1)
+       108: (149,149,149,255) #959595FF srgba(149,149,149,1)
+         3: (149,150,150,255) #959696FF srgba(149,150,150,1)
+       244: (150,150,150,255) #969696FF grey59
+        19: (150,151,151,255) #969797FF srgba(150,151,151,1)
+       103: (151,151,151,255) #979797FF srgba(151,151,151,1)
+         6: (151,152,152,255) #979898FF srgba(151,152,152,1)
+       108: (152,152,152,255) #989898FF srgba(152,152,152,1)
+       109: (153,153,153,255) #999999FF grey60
+        20: (153,154,154,255) #999A9AFF srgba(153,154,154,1)
+       121: (154,154,154,255) #9A9A9AFF srgba(154,154,154,1)
+        31: (154,155,155,255) #9A9B9BFF srgba(154,155,155,1)
+       104: (155,155,155,255) #9B9B9BFF srgba(155,155,155,1)
+        99: (156,156,156,255) #9C9C9CFF grey61
+        15: (156,157,157,255) #9C9D9DFF srgba(156,157,157,1)
+        78: (157,157,157,255) #9D9D9DFF srgba(157,157,157,1)
+         1: (157,158,158,255) #9D9E9EFF srgba(157,158,158,1)
+        99: (158,158,158,255) #9E9E9EFF grey62
+        15: (158,159,159,255) #9E9F9FFF srgba(158,159,159,1)
+       145: (159,159,159,255) #9F9F9FFF srgba(159,159,159,1)
+        34: (159,160,160,255) #9FA0A0FF srgba(159,160,160,1)
+       133: (160,160,160,255) #A0A0A0FF srgba(160,160,160,1)
+         1: (160,161,161,255) #A0A1A1FF srgba(160,161,161,1)
+       874: (161,161,161,255) #A1A1A1FF grey63
+         4: (161,162,162,255) #A1A2A2FF srgba(161,162,162,1)
+        77: (162,162,162,255) #A2A2A2FF srgba(162,162,162,1)
+       585: (163,163,163,255) #A3A3A3FF grey64
+        63: (164,164,164,255) #A4A4A4FF srgba(164,164,164,1)
+         3: (164,165,165,255) #A4A5A5FF srgba(164,165,165,1)
+        66: (165,165,165,255) #A5A5A5FF srgba(165,165,165,1)
+        68: (166,166,166,255) #A6A6A6FF grey65
+         6: (166,167,167,255) #A6A7A7FF srgba(166,167,167,1)
+        64: (167,167,167,255) #A7A7A7FF srgba(167,167,167,1)
+         1: (167,168,168,255) #A7A8A8FF srgba(167,168,168,1)
+        88: (168,168,168,255) #A8A8A8FF grey66
+         1: (168,169,169,255) #A8A9A9FF srgba(168,169,169,1)
+        69: (169,169,169,255) #A9A9A9FF DarkGray
+        69: (170,170,170,255) #AAAAAAFF srgba(170,170,170,1)
+         1: (170,171,171,255) #AAABABFF srgba(170,171,171,1)
+        66: (171,171,171,255) #ABABABFF grey67
+         1: (171,172,172,255) #ABACACFF srgba(171,172,172,1)
+        80: (172,172,172,255) #ACACACFF srgba(172,172,172,1)
+        54: (173,173,173,255) #ADADADFF grey68
+        11: (173,174,174,255) #ADAEAEFF srgba(173,174,174,1)
+        57: (174,174,174,255) #AEAEAEFF srgba(174,174,174,1)
+         2: (174,175,175,255) #AEAFAFFF srgba(174,175,175,1)
+        94: (175,175,175,255) #AFAFAFFF srgba(175,175,175,1)
+        13: (175,176,176,255) #AFB0B0FF srgba(175,176,176,1)
+       207: (176,176,176,255) #B0B0B0FF grey69
+         1: (176,177,177,255) #B0B1B1FF srgba(176,177,177,1)
+        54: (177,177,177,255) #B1B1B1FF srgba(177,177,177,1)
+       261: (178,178,178,255) #B2B2B2FF srgba(178,178,178,1)
+         1: (178,178,178,254) #B2B2B2FE srgba(178,178,178,0.996078)
+         2: (178,179,179,255) #B2B3B3FF srgba(178,179,179,1)
+        64: (179,179,179,255) #B3B3B3FF grey70
+       994: (180,180,180,255) #B4B4B4FF srgba(180,180,180,1)
+         2: (180,180,180,254) #B4B4B4FE srgba(180,180,180,0.996078)
+         2: (180,180,180,253) #B4B4B4FD srgba(180,180,180,0.992157)
+         1: (180,181,181,255) #B4B5B5FF srgba(180,181,181,1)
+       441: (181,181,181,255) #B5B5B5FF grey71
+       621: (182,182,182,255) #B6B6B6FF srgba(182,182,182,1)
+         1: (182,182,182,253) #B6B6B6FD srgba(182,182,182,0.992157)
+         1: (182,182,182,254) #B6B6B6FE srgba(182,182,182,0.996078)
+         1: (182,183,183,255) #B6B7B7FF srgba(182,183,183,1)
+       977: (183,183,183,255) #B7B7B7FF srgba(183,183,183,1)
+         4: (183,183,183,254) #B7B7B7FE srgba(183,183,183,0.996078)
+         1: (183,183,183,253) #B7B7B7FD srgba(183,183,183,0.992157)
+      1932: (184,184,184,255) #B8B8B8FF grey72
+         6: (184,184,184,254) #B8B8B8FE srgba(184,184,184,0.996078)
+         1: (184,184,184,253) #B8B8B8FD srgba(184,184,184,0.992157)
+       793: (185,185,185,255) #B9B9B9FF srgba(185,185,185,1)
+         2: (185,185,185,254) #B9B9B9FE srgba(185,185,185,0.996078)
+         1: (185,185,185,253) #B9B9B9FD srgba(185,185,185,0.992157)
+      1514: (186,186,186,255) #BABABAFF grey73
+         2: (186,186,186,254) #BABABAFE srgba(186,186,186,0.996078)
+       972: (187,187,187,255) #BBBBBBFF srgba(187,187,187,1)
+         1: (187,187,187,253) #BBBBBBFD srgba(187,187,187,0.992157)
+      2476: (188,188,188,255) #BCBCBCFF srgba(188,188,188,1)
+         2: (188,188,188,253) #BCBCBCFD srgba(188,188,188,0.992157)
+         1: (188,188,188,254) #BCBCBCFE srgba(188,188,188,0.996078)
+      2442: (189,189,189,255) #BDBDBDFF grey74
+         1: (189,189,189,253) #BDBDBDFD srgba(189,189,189,0.992157)
+      2429: (190,190,190,255) #BEBEBEFF grey
+         5: (190,190,190,253) #BEBEBEFD srgba(190,190,190,0.992157)
+         2: (190,190,190,254) #BEBEBEFE srgba(190,190,190,0.996078)
+      2724: (191,191,191,255) #BFBFBFFF grey75
+         6: (191,191,191,254) #BFBFBFFE srgba(191,191,191,0.996078)
+         2: (191,191,191,253) #BFBFBFFD srgba(191,191,191,0.992157)
+      1896: (192,192,192,255) #C0C0C0FF silver
+         4: (192,192,192,254) #C0C0C0FE srgba(192,192,192,0.996078)
+      2290: (193,193,193,255) #C1C1C1FF srgba(193,193,193,1)
+         3: (193,193,193,254) #C1C1C1FE srgba(193,193,193,0.996078)
+         1: (193,193,193,253) #C1C1C1FD srgba(193,193,193,0.992157)
+      4259: (194,194,194,255) #C2C2C2FF grey76
+         6: (194,194,194,254) #C2C2C2FE srgba(194,194,194,0.996078)
+         5: (194,194,194,253) #C2C2C2FD srgba(194,194,194,0.992157)
+      1487: (195,195,195,255) #C3C3C3FF srgba(195,195,195,1)
+         1: (195,195,195,254) #C3C3C3FE srgba(195,195,195,0.996078)
+      8294: (196,196,196,255) #C4C4C4FF grey77
+        10: (196,196,196,254) #C4C4C4FE srgba(196,196,196,0.996078)
+         8: (196,196,196,253) #C4C4C4FD srgba(196,196,196,0.992157)
+      2412: (197,197,197,255) #C5C5C5FF srgba(197,197,197,1)
+         3: (197,197,197,254) #C5C5C5FE srgba(197,197,197,0.996078)
+         1: (197,197,197,253) #C5C5C5FD srgba(197,197,197,0.992157)
+      5185: (198,198,198,255) #C6C6C6FF srgba(198,198,198,1)
+         9: (198,198,198,254) #C6C6C6FE srgba(198,198,198,0.996078)
+         8: (198,198,198,253) #C6C6C6FD srgba(198,198,198,0.992157)
+         6: (199,198,198,254) #C7C6C6FE srgba(199,198,198,0.996078)
+         1: (199,198,198,253) #C7C6C6FD srgba(199,198,198,0.992157)
+      7943: (199,199,199,255) #C7C7C7FF grey78
+        19: (199,199,199,254) #C7C7C7FE srgba(199,199,199,0.996078)
+        11: (199,199,199,253) #C7C7C7FD srgba(199,199,199,0.992157)
+         2: (200,199,199,253) #C8C7C7FD srgba(200,199,199,0.992157)
+         1: (200,199,199,255) #C8C7C7FF srgba(200,199,199,1)
+         1: (200,199,199,254) #C8C7C7FE srgba(200,199,199,0.996078)
+      5916: (200,200,200,255) #C8C8C8FF srgba(200,200,200,1)
+         9: (200,200,200,254) #C8C8C8FE srgba(200,200,200,0.996078)
+         6: (200,200,200,253) #C8C8C8FD srgba(200,200,200,0.992157)
+      6666: (201,201,201,255) #C9C9C9FF grey79
+        10: (201,201,201,254) #C9C9C9FE srgba(201,201,201,0.996078)
+         4: (201,201,201,253) #C9C9C9FD srgba(201,201,201,0.992157)
+         1: (201,202,202,255) #C9CACAFF srgba(201,202,202,1)
+      9285: (202,202,202,255) #CACACAFF srgba(202,202,202,1)
+        14: (202,202,202,253) #CACACAFD srgba(202,202,202,0.992157)
+        11: (202,202,202,254) #CACACAFE srgba(202,202,202,0.996078)
+         5: (203,202,202,254) #CBCACAFE srgba(203,202,202,0.996078)
+         4: (203,202,202,253) #CBCACAFD srgba(203,202,202,0.992157)
+      4117: (203,203,203,255) #CBCBCBFF srgba(203,203,203,1)
+         6: (203,203,203,253) #CBCBCBFD srgba(203,203,203,0.992157)
+         2: (203,203,203,254) #CBCBCBFE srgba(203,203,203,0.996078)
+     13710: (204,204,204,255) #CCCCCCFF grey80
+        21: (204,204,204,253) #CCCCCCFD srgba(204,204,204,0.992157)
+        15: (204,204,204,254) #CCCCCCFE srgba(204,204,204,0.996078)
+         7: (205,204,204,254) #CDCCCCFE srgba(205,204,204,0.996078)
+         3: (205,204,204,253) #CDCCCCFD srgba(205,204,204,0.992157)
+      7251: (205,205,205,255) #CDCDCDFF srgba(205,205,205,1)
+         9: (205,205,205,253) #CDCDCDFD srgba(205,205,205,0.992157)
+         6: (205,205,205,254) #CDCDCDFE srgba(205,205,205,0.996078)
+      9502: (206,206,206,255) #CECECEFF srgba(206,206,206,1)
+        18: (206,206,206,253) #CECECEFD srgba(206,206,206,0.992157)
+        15: (206,206,206,254) #CECECEFE srgba(206,206,206,0.996078)
+         2: (206,207,207,255) #CECFCFFF srgba(206,207,207,1)
+         6: (207,206,206,253) #CFCECEFD srgba(207,206,206,0.992157)
+         2: (207,206,206,254) #CFCECEFE srgba(207,206,206,0.996078)
+     15901: (207,207,207,255) #CFCFCFFF grey81
+        24: (207,207,207,254) #CFCFCFFE srgba(207,207,207,0.996078)
+        11: (207,207,207,253) #CFCFCFFD srgba(207,207,207,0.992157)
+         8: (208,207,207,254) #D0CFCFFE srgba(208,207,207,0.996078)
+     10785: (208,208,208,255) #D0D0D0FF srgba(208,208,208,1)
+        11: (208,208,208,254) #D0D0D0FE srgba(208,208,208,0.996078)
+         7: (208,208,208,253) #D0D0D0FD srgba(208,208,208,0.992157)
+     14624: (209,209,209,255) #D1D1D1FF grey82
+        21: (209,209,209,253) #D1D1D1FD srgba(209,209,209,0.992157)
+        19: (209,209,209,254) #D1D1D1FE srgba(209,209,209,0.996078)
+        10: (210,209,209,253) #D2D1D1FD srgba(210,209,209,0.992157)
+         1: (210,209,209,255) #D2D1D1FF srgba(210,209,209,1)
+     15483: (210,210,210,255) #D2D2D2FF srgba(210,210,210,1)
+        24: (210,210,210,254) #D2D2D2FE srgba(210,210,210,0.996078)
+        11: (210,210,210,253) #D2D2D2FD srgba(210,210,210,0.992157)
+      6787: (211,211,211,255) #D3D3D3FF LightGray
+         4: (211,211,211,253) #D3D3D3FD srgba(211,211,211,0.992157)
+         4: (211,211,211,254) #D3D3D3FE srgba(211,211,211,0.996078)
+     22520: (212,212,212,255) #D4D4D4FF grey83
+        44: (212,212,212,254) #D4D4D4FE srgba(212,212,212,0.996078)
+        27: (212,212,212,253) #D4D4D4FD srgba(212,212,212,0.992157)
+        16: (213,212,212,254) #D5D4D4FE srgba(213,212,212,0.996078)
+     12292: (213,213,213,255) #D5D5D5FF srgba(213,213,213,1)
+        21: (213,213,213,254) #D5D5D5FE srgba(213,213,213,0.996078)
+        13: (213,213,213,253) #D5D5D5FD srgba(213,213,213,0.992157)
+     14672: (214,214,214,255) #D6D6D6FF grey84
+        14: (214,214,214,253) #D6D6D6FD srgba(214,214,214,0.992157)
+        11: (214,214,214,254) #D6D6D6FE srgba(214,214,214,0.996078)
+     23878: (215,215,215,255) #D7D7D7FF srgba(215,215,215,1)
+        49: (215,215,215,254) #D7D7D7FE srgba(215,215,215,0.996078)
+        28: (215,215,215,253) #D7D7D7FD srgba(215,215,215,0.992157)
+        21: (216,215,215,253) #D8D7D7FD srgba(216,215,215,0.992157)
+        16: (216,215,215,254) #D8D7D7FE srgba(216,215,215,0.996078)
+     14251: (216,216,216,255) #D8D8D8FF srgba(216,216,216,1)
+        21: (216,216,216,254) #D8D8D8FE srgba(216,216,216,0.996078)
+        15: (216,216,216,253) #D8D8D8FD srgba(216,216,216,0.992157)
+     20725: (217,217,217,255) #D9D9D9FF grey85
+        30: (217,217,217,254) #D9D9D9FE srgba(217,217,217,0.996078)
+        22: (217,217,217,253) #D9D9D9FD srgba(217,217,217,0.992157)
+         6: (218,217,217,254) #DAD9D9FE srgba(218,217,217,0.996078)
+         5: (218,217,217,253) #DAD9D9FD srgba(218,217,217,0.992157)
+         1: (218,217,217,255) #DAD9D9FF srgba(218,217,217,1)
+     24237: (218,218,218,255) #DADADAFF srgba(218,218,218,1)
+        40: (218,218,218,253) #DADADAFD srgba(218,218,218,0.992157)
+        35: (218,218,218,254) #DADADAFE srgba(218,218,218,0.996078)
+         9: (219,218,218,253) #DBDADAFD srgba(219,218,218,0.992157)
+         9: (219,218,218,254) #DBDADAFE srgba(219,218,218,0.996078)
+     16334: (219,219,219,255) #DBDBDBFF grey86
+        58: (219,219,219,254) #DBDBDBFE srgba(219,219,219,0.996078)
+        22: (219,219,219,253) #DBDBDBFD srgba(219,219,219,0.992157)
+        24: (220,219,219,253) #DCDBDBFD srgba(220,219,219,0.992157)
+        19: (220,219,219,254) #DCDBDBFE srgba(220,219,219,0.996078)
+         3: (220,219,219,255) #DCDBDBFF srgba(220,219,219,1)
+     30826: (220,220,220,255) #DCDCDCFF gainsboro
+        38: (220,220,220,254) #DCDCDCFE srgba(220,220,220,0.996078)
+        37: (220,220,220,253) #DCDCDCFD srgba(220,220,220,0.992157)
+         6: (221,220,220,254) #DDDCDCFE srgba(221,220,220,0.996078)
+         2: (221,220,220,253) #DDDCDCFD srgba(221,220,220,0.992157)
+     18056: (221,221,221,255) #DDDDDDFF srgba(221,221,221,1)
+        18: (221,221,221,253) #DDDDDDFD srgba(221,221,221,0.992157)
+        15: (221,221,221,254) #DDDDDDFE srgba(221,221,221,0.996078)
+     17786: (222,222,222,255) #DEDEDEFF grey87
+        38: (222,222,222,254) #DEDEDEFE srgba(222,222,222,0.996078)
+        28: (222,222,222,253) #DEDEDEFD srgba(222,222,222,0.992157)
+        23: (223,222,222,254) #DFDEDEFE srgba(223,222,222,0.996078)
+         4: (223,222,222,253) #DFDEDEFD srgba(223,222,222,0.992157)
+     36873: (223,223,223,255) #DFDFDFFF srgba(223,223,223,1)
+        46: (223,223,223,254) #DFDFDFFE srgba(223,223,223,0.996078)
+        34: (223,223,223,253) #DFDFDFFD srgba(223,223,223,0.992157)
+         8: (224,223,223,253) #E0DFDFFD srgba(224,223,223,0.992157)
+         2: (224,223,223,254) #E0DFDFFE srgba(224,223,223,0.996078)
+     21312: (224,224,224,255) #E0E0E0FF grey88
+        31: (224,224,224,254) #E0E0E0FE srgba(224,224,224,0.996078)
+        22: (224,224,224,253) #E0E0E0FD srgba(224,224,224,0.992157)
+     26317: (225,225,225,255) #E1E1E1FF srgba(225,225,225,1)
+        36: (225,225,225,254) #E1E1E1FE srgba(225,225,225,0.996078)
+        21: (225,225,225,253) #E1E1E1FD srgba(225,225,225,0.992157)
+     31985: (226,226,226,255) #E2E2E2FF srgba(226,226,226,1)
+        42: (226,226,226,254) #E2E2E2FE srgba(226,226,226,0.996078)
+        31: (226,226,226,253) #E2E2E2FD srgba(226,226,226,0.992157)
+     20033: (227,227,227,255) #E3E3E3FF grey89
+        35: (227,227,227,254) #E3E3E3FE srgba(227,227,227,0.996078)
+        18: (227,227,227,253) #E3E3E3FD srgba(227,227,227,0.992157)
+         4: (228,227,227,253) #E4E3E3FD srgba(228,227,227,0.992157)
+         2: (228,227,227,254) #E4E3E3FE srgba(228,227,227,0.996078)
+     42664: (228,228,228,255) #E4E4E4FF srgba(228,228,228,1)
+        71: (228,228,228,253) #E4E4E4FD srgba(228,228,228,0.992157)
+        64: (228,228,228,254) #E4E4E4FE srgba(228,228,228,0.996078)
+        22: (229,228,228,254) #E5E4E4FE srgba(229,228,228,0.996078)
+        13: (229,228,228,253) #E5E4E4FD srgba(229,228,228,0.992157)
+     24837: (229,229,229,255) #E5E5E5FF grey90
+        42: (229,229,229,254) #E5E5E5FE srgba(229,229,229,0.996078)
+        19: (229,229,229,253) #E5E5E5FD srgba(229,229,229,0.992157)
+     21928: (230,230,230,255) #E6E6E6FF srgba(230,230,230,1)
+        35: (230,230,230,253) #E6E6E6FD srgba(230,230,230,0.992157)
+        24: (230,230,230,254) #E6E6E6FE srgba(230,230,230,0.996078)
+         3: (231,230,230,253) #E7E6E6FD srgba(231,230,230,0.992157)
+         2: (231,230,230,254) #E7E6E6FE srgba(231,230,230,0.996078)
+     42262: (231,231,231,255) #E7E7E7FF srgba(231,231,231,1)
+        57: (231,231,231,253) #E7E7E7FD srgba(231,231,231,0.992157)
+        41: (231,231,231,254) #E7E7E7FE srgba(231,231,231,0.996078)
+         8: (232,231,231,253) #E8E7E7FD srgba(232,231,231,0.992157)
+         1: (232,231,231,254) #E8E7E7FE srgba(232,231,231,0.996078)
+         1: (232,231,231,255) #E8E7E7FF srgba(232,231,231,1)
+     19966: (232,232,232,255) #E8E8E8FF grey91
+        22: (232,232,232,253) #E8E8E8FD srgba(232,232,232,0.992157)
+        21: (232,232,232,254) #E8E8E8FE srgba(232,232,232,0.996078)
+         5: (233,232,232,254) #E9E8E8FE srgba(233,232,232,0.996078)
+         4: (233,232,232,253) #E9E8E8FD srgba(233,232,232,0.992157)
+     33698: (233,233,233,255) #E9E9E9FF srgba(233,233,233,1)
+        51: (233,233,233,254) #E9E9E9FE srgba(233,233,233,0.996078)
+        39: (233,233,233,253) #E9E9E9FD srgba(233,233,233,0.992157)
+         5: (234,233,233,253) #EAE9E9FD srgba(234,233,233,0.992157)
+         2: (234,233,233,254) #EAE9E9FE srgba(234,233,233,0.996078)
+     31830: (234,234,234,255) #EAEAEAFF srgba(234,234,234,1)
+        38: (234,234,234,253) #EAEAEAFD srgba(234,234,234,0.992157)
+        38: (234,234,234,254) #EAEAEAFE srgba(234,234,234,0.996078)
+         4: (235,234,234,254) #EBEAEAFE srgba(235,234,234,0.996078)
+         1: (235,234,234,253) #EBEAEAFD srgba(235,234,234,0.992157)
+     19894: (235,235,235,255) #EBEBEBFF grey92
+        28: (235,235,235,253) #EBEBEBFD srgba(235,235,235,0.992157)
+        21: (235,235,235,254) #EBEBEBFE srgba(235,235,235,0.996078)
+     45802: (236,236,236,255) #ECECECFF srgba(236,236,236,1)
+        53: (236,236,236,253) #ECECECFD srgba(236,236,236,0.992157)
+        53: (236,236,236,254) #ECECECFE srgba(236,236,236,0.996078)
+     27833: (237,237,237,255) #EDEDEDFF grey93
+        35: (237,237,237,254) #EDEDEDFE srgba(237,237,237,0.996078)
+        34: (237,237,237,253) #EDEDEDFD srgba(237,237,237,0.992157)
+       283: (237,238,238,255) #EDEEEEFF srgba(237,238,238,1)
+     23458: (238,238,238,255) #EEEEEEFF srgba(238,238,238,1)
+        35: (238,238,238,254) #EEEEEEFE srgba(238,238,238,0.996078)
+        25: (238,238,238,253) #EEEEEEFD srgba(238,238,238,0.992157)
+     45766: (239,239,239,255) #EFEFEFFF srgba(239,239,239,1)
+        65: (239,239,239,254) #EFEFEFFE srgba(239,239,239,0.996078)
+        53: (239,239,239,253) #EFEFEFFD srgba(239,239,239,0.992157)
+         7: (240,239,239,254) #F0EFEFFE srgba(240,239,239,0.996078)
+     22052: (240,240,240,255) #F0F0F0FF grey94
+        26: (240,240,240,254) #F0F0F0FE srgba(240,240,240,0.996078)
+        24: (240,240,240,253) #F0F0F0FD srgba(240,240,240,0.992157)
+     26685: (241,241,241,255) #F1F1F1FF srgba(241,241,241,1)
+        33: (241,241,241,254) #F1F1F1FE srgba(241,241,241,0.996078)
+        28: (241,241,241,253) #F1F1F1FD srgba(241,241,241,0.992157)
+     35012: (242,242,242,255) #F2F2F2FF grey95
+        48: (242,242,242,253) #F2F2F2FD srgba(242,242,242,0.992157)
+        41: (242,242,242,254) #F2F2F2FE srgba(242,242,242,0.996078)
+         8: (243,242,242,254) #F3F2F2FE srgba(243,242,242,0.996078)
+         3: (243,242,242,253) #F3F2F2FD srgba(243,242,242,0.992157)
+     21042: (243,243,243,255) #F3F3F3FF srgba(243,243,243,1)
+        28: (243,243,243,253) #F3F3F3FD srgba(243,243,243,0.992157)
+        23: (243,243,243,254) #F3F3F3FE srgba(243,243,243,0.996078)
+     41911: (244,244,244,255) #F4F4F4FF srgba(244,244,244,1)
+        63: (244,244,244,254) #F4F4F4FE srgba(244,244,244,0.996078)
+        42: (244,244,244,253) #F4F4F4FD srgba(244,244,244,0.992157)
+         5: (245,244,244,254) #F5F4F4FE srgba(245,244,244,0.996078)
+         4: (245,244,244,253) #F5F4F4FD srgba(245,244,244,0.992157)
+     28066: (245,245,245,255) #F5F5F5FF grey96
+        33: (245,245,245,254) #F5F5F5FE srgba(245,245,245,0.996078)
+        29: (245,245,245,253) #F5F5F5FD srgba(245,245,245,0.992157)
+        10: (246,245,245,253) #F6F5F5FD srgba(246,245,245,0.992157)
+         5: (246,245,245,254) #F6F5F5FE srgba(246,245,245,0.996078)
+     23362: (246,246,246,255) #F6F6F6FF srgba(246,246,246,1)
+        27: (246,246,246,254) #F6F6F6FE srgba(246,246,246,0.996078)
+        22: (246,246,246,253) #F6F6F6FD srgba(246,246,246,0.992157)
+     46854: (247,247,247,255) #F7F7F7FF grey97
+        68: (247,247,247,254) #F7F7F7FE srgba(247,247,247,0.996078)
+        46: (247,247,247,253) #F7F7F7FD srgba(247,247,247,0.992157)
+         8: (248,247,247,254) #F8F7F7FE srgba(248,247,247,0.996078)
+         6: (248,247,247,253) #F8F7F7FD srgba(248,247,247,0.992157)
+     21047: (248,248,248,255) #F8F8F8FF srgba(248,248,248,1)
+        33: (248,248,248,254) #F8F8F8FE srgba(248,248,248,0.996078)
+        20: (248,248,248,253) #F8F8F8FD srgba(248,248,248,0.992157)
+     31611: (249,249,249,255) #F9F9F9FF srgba(249,249,249,1)
+        54: (249,249,249,254) #F9F9F9FE srgba(249,249,249,0.996078)
+        23: (249,249,249,253) #F9F9F9FD srgba(249,249,249,0.992157)
+         5: (250,249,249,253) #FAF9F9FD srgba(250,249,249,0.992157)
+         5: (250,249,249,254) #FAF9F9FE srgba(250,249,249,0.996078)
+     41526: (250,250,250,255) #FAFAFAFF grey98
+        59: (250,250,250,253) #FAFAFAFD srgba(250,250,250,0.992157)
+        57: (250,250,250,254) #FAFAFAFE srgba(250,250,250,0.996078)
+         8: (251,250,250,253) #FBFAFAFD srgba(251,250,250,0.992157)
+         5: (251,250,250,254) #FBFAFAFE srgba(251,250,250,0.996078)
+     21646: (251,251,251,255) #FBFBFBFF srgba(251,251,251,1)
+        24: (251,251,251,254) #FBFBFBFE srgba(251,251,251,0.996078)
+        19: (251,251,251,253) #FBFBFBFD srgba(251,251,251,0.992157)
+     46309: (252,252,252,255) #FCFCFCFF grey99
+        72: (252,252,252,254) #FCFCFCFE srgba(252,252,252,0.996078)
+        66: (252,252,252,253) #FCFCFCFD srgba(252,252,252,0.992157)
+        14: (253,252,252,253) #FDFCFCFD srgba(253,252,252,0.992157)
+        11: (253,252,252,254) #FDFCFCFE srgba(253,252,252,0.996078)
+     34794: (253,253,253,255) #FDFDFDFF srgba(253,253,253,1)
+        48: (253,253,253,254) #FDFDFDFE srgba(253,253,253,0.996078)
+        45: (253,253,253,253) #FDFDFDFD srgba(253,253,253,0.992157)
+         9: (254,253,253,253) #FEFDFDFD srgba(254,253,253,0.992157)
+         7: (254,253,253,254) #FEFDFDFE srgba(254,253,253,0.996078)
+     19498: (254,254,254,255) #FEFEFEFF srgba(254,254,254,1)
+        21: (254,254,254,253) #FEFEFEFD srgba(254,254,254,0.992157)
+        18: (254,254,254,254) #FEFEFEFE srgba(254,254,254,0.996078)
+       372: (254,255,255,253) #FEFFFFFD srgba(254,255,255,0.992157)
+       251: (254,255,255,254) #FEFFFFFE srgba(254,255,255,0.996078)
+        25: (254,255,255,255) #FEFFFFFF srgba(254,255,255,1)
+   1425725: (255,255,255,255) #FFFFFFFF white
+      2168: (255,255,255,254) #FFFFFFFE srgba(255,255,255,0.996078)
+      1628: (255,255,255,253) #FFFFFFFD srgba(255,255,255,0.992157)
+  Rendering intent: Perceptual
+  Gamma: 0.454545
+  Chromaticity:
+    red primary: (0.64,0.33)
+    green primary: (0.3,0.6)
+    blue primary: (0.15,0.06)
+    white point: (0.3127,0.329)
+  Matte color: grey74
+  Background color: white
+  Border color: srgb(223,223,223)
+  Transparent color: none
+  Interlace: None
+  Intensity: Undefined
+  Compose: Over
+  Page geometry: 2944x1912+0+0
+  Dispose: Undefined
+  Iterations: 0
+  Compression: Zip
+  Orientation: Undefined
+  Properties:
+    date:create: 2018-10-09T17:02:52+08:00
+    date:modify: 2018-10-09T14:09:27+08:00
+    png:iCCP: chunk was found
+    png:IHDR.bit-depth-orig: 8
+    png:IHDR.bit_depth: 8
+    png:IHDR.color-type-orig: 6
+    png:IHDR.color_type: 6 (RGBA)
+    png:IHDR.interlace_method: 0 (Not interlaced)
+    png:IHDR.width,height: 2944, 1912
+    signature: 6fb98ec781b2cf1f501b55d17795af3f18cadcf5634c14bbe6d14c1ffe8dcc8d
+  Artifacts:
+    verbose: true
+  Tainted: False
+  Filesize: 3.32722MiB
+  Number pixels: 5.62893M
+  Pixels per second: 9.70505MB
+  User time: 0.420u
+  Elapsed time: 0:01.580
+  Version: ImageMagick 7.0.8-8 Q16 x86_64 2018-08-06 https://www.imagemagick.org
+```
+
+Normalize: http://www.imagemagick.org/script/command-line-options.php#normalize
+
+```
+convert -normalize challenge.png challenge_normalized.png
+```
+
+Channel/Separate: http://www.imagemagick.org/Usage/color_basics/#channels
+
+```
+convert -colorspace CMYK -separate challenge_normalized.png challenge_normalized_separated_CMYK_%d.png
+```
+And found:
+
+![](https://raw.githubusercontent.com/yangboz/bitcoin-puzzles/master/310-btc/A_challenge_normalized_separated_CMYK_3.png)
+
+```
+convert -colorspace RGB -separate challenge_normalized.png challenge_normalized_separated_RGB_%d.png 
+
+```
+
+#### zsteg https://github.com/zed-0xff/zsteg
+
+```
+gem install zsteg
+```
+
+```
+zsteg chanllenge.png
+
+b1,r,lsb,xy         .. file: MPEG ADTS, layer III,  v2.5, Stereo
+b2,r,msb,xy         .. file: ddis/ddif
+```
+
+Hint:
+
+```
+zsteg -a chanllenge.png
+
+file: MPEG ADTS, layer III,  v2.5, Stereo
+b2,r,msb,xy         .. file: ddis/ddif
+b8,rgb,msb,xy       .. text: "OOOooo///"
+b1,rgb,lsb,xy,prime .. file: MPEG ADTS, AAC, v4 Main, surround + side
+b2,r,msb,xy,prime   .. file: MPEG ADTS, AAC, v4 LC, 8 kHz, surround + side
+b2,rgb,lsb,xy,prime .. file: AIX core file fulldump 32-bit
+b3,r,lsb,xy,prime   .. file: MPEG ADTS, layer II, v2,  24 kbps, Monaural
+b5,rgb,lsb,xy,prime .. file: AIX core file fulldump 32-bit
+b6,r,lsb,xy,prime   .. file: AIX core file fulldump
+b1,abgr,msb,yx      .. file: old packed data
+b3,rgba,lsb,yx      .. file: MPEG ADTS, AAC, v4 Main, 88.2 kHz, surround + side
+b4,rgb,lsb,yx       .. file: MPEG ADTS, AAC, v4 Main, 96 kHz, stereo + center
+b6,r,msb,yx         .. file: MPEG ADTS, AAC, v4 LC, 12 kHz, surround + side
+b8,r,lsb,yx         .. file: MPEG ADTS, AAC, v4 LTP, surround + side
+b3,rgba,lsb,yx,prime.. file: MPEG ADTS, layer II, v1, 224 kbps, 48 kHz, Monaural
+b4,rgb,lsb,yx,prime .. file: MPEG ADTS, layer I, v2,  96 kbps, 24 kHz, Monaural
+b5,rgba,lsb,yx,prime.. file: AIX core file fulldump 64-bit
+b7,r,lsb,yx,prime   .. file: AIX core file fulldump 64-bit
+b7,rgb,msb,yx,prime .. file: ddis/ddif
+b2,rgb,lsb,XY       .. file: MPEG ADTS, AAC, v4 Main, 96 kHz
+b4,abgr,msb,XY      .. text: "/\"_U?3?3"
+b8,rgb,msb,XY       .. text: "   PPP000000"
+b8,abgr,msb,XY      .. file: JPEG image data
+b5,rgba,lsb,XY,prime.. file: raw G3 (Group 3) FAX, byte-padded
+b3,rgb,lsb,YX       .. file: TeX font metric data (??)
+b8,rgb,msb,YX       .. text: "XXX{{{pppppp"
+b8,abgr,msb,YX      .. file: JPEG image data
+b5,rgb,lsb,YX,prime .. file: raw G3 (Group 3) FAX, byte-padded
+b5,rgba,lsb,YX,prime.. file: AIX core file fulldump 64-bit
+b1,rgba,lsb,Xy      .. file: MPEG ADTS, AAC, v4 LTP, surround + side
+b1,abgr,lsb,Xy      .. file: MPEG ADTS, AAC, v2, stereo + center
+b1,abgr,msb,Xy      .. file: compacted data
+b8,rgb,lsb,Xy       .. text: ")))###333"
+b1,r,lsb,Xy,prime   .. file: PGP	Secret Key -
+b8,rgb,lsb,Xy,prime .. text: "\"\"\"###\t\t\t"
+b2,r,msb,yX,prime   .. text: "#pt1C8G!"
+b3,abgr,msb,yX,prime.. file: PGP	Secret Sub-key -
+b1,r,lsb,xY         .. file: MS Windows COFF PowerPC object file
+b1,rgb,lsb,xY       .. file: MPEG ADTS, AAC, v4 Main, 96 kHz
+b2,rgb,lsb,xY       .. file: MPEG ADTS, layer II, v2,  56 kbps, Stereo
+b4,r,lsb,xY         .. file: compacted data
+b4,r,msb,xY         .. file: MPEG ADTS, AAC, v2 Main, 96 kHz
+b4,abgr,msb,xY      .. text: "?3?3_U/\""
+b6,r,lsb,xY         .. file: MPEG ADTS, AAC, v4 LC, stereo+center+LFE
+b7,r,lsb,xY         .. file: MPEG ADTS, layer II, v1, Monaural
+b7,abgr,lsb,xY      .. file: AIX core file fulldump 64-bit
+b8,rgb,msb,xY       .. text: "000000PPP   "
+b7,abgr,lsb,xY,prime.. file: AIX core file 64-bit
+b8,rgb,lsb,xY,prime .. file: PDP-11 UNIX/RT ldp
+b8,rgba,lsb,xY,prime.. file: PDP-11 UNIX/RT ldp
+b1,rgb,msb,Yx       .. file: MPEG ADTS, AAC, v4 Main, 96 kHz, surround + side
+b1,rgba,lsb,Yx      .. file: MPEG ADTS, AAC, v4 LTP, stereo+center+LFE
+b1,abgr,lsb,Yx      .. file: MPEG ADTS, AAC, v2, surround + LFE
+b1,abgr,msb,Yx      .. file: compacted data
+b2,rgb,lsb,Yx       .. file: MPEG ADTS, layer II, v2,  32 kbps, 22.05 kHz, Monaural
+b3,rgb,msb,Yx       .. file: very old 16-bit-int big-endian archive
+b3,rgba,lsb,Yx      .. file: MPEG ADTS, layer I, v2, 224 kbps, Stereo
+b4,rgb,lsb,Yx       .. file: MPEG ADTS, layer III, v1, 192 kbps, 32 kHz, 2x Monaural
+b8,rgb,lsb,Yx       .. text: "\t\t\t\n\n\n   "
+b1,abgr,msb,Yx,prime.. file: old packed data
+b5,rgba,lsb,Yx,prime.. file: AIX core file fulldump
+```
+
+#### Exiv2: http://www.exiv2.org/
+
+```
+brew install exiv2
+```
+Hints: http://dev.exiv2.org/projects/exiv2/wiki/The_Metadata_in_TIFF_files
+
+1.extract an ICC profile to stdout.
+
+```
+
+HLinomntrRGB XYZ ?	1acspMSFTIEC sRGB???-HP  cprtP3desc?lwtpt?bkptrXYZgXYZ,bXYZ@dmndTpdmdd??vuedL?view?$lumi?meas
+                                                                                                                     $tech0
+                                                                                                                           rTRC<
+                                                                                                                               gTRC<
+ bTRC<
+     textCopyright (c) 1998 Hewlett-Packard CompanydescsRGB IEC61966-2.1sRGB IEC61966-2.1XYZ ?Q?XYZ XYZ o?8??XYZ b????XYZ $????descIEC http://www.iec.chIEC http://www.iec.chdesc.IEC 61966-2.1 Default RGB colour space - sRGB.IEC 61966-2.1 Default RGB colour space - sRGBdesc,Reference Viewing Condition in IEC61966-2.1,Reference Viewing Condition in IEC61966-2.1view??_.???
+                                                                                                                \?XYZ L	VPW?meas?sig CRT curv
+%+28>ELRY`gnu|??????????????????????????????
+                              &/8AKT]gqz????????????
++:IXgw????????'7HYj{???????+=Oat???????             !-8COZfr~?????????? -;HUcq~?????????
+                                    ?		%	:	O	d	y	?	?	?	?	?	?
+
+'
+=
+T
+j
+?
+?
+?
+?
+?
+?
+
+*R{???Gp???@j???>i???  A l ? ? ?!!H!u!?!?!?"'"U"?"?"?#
+(?(q(?(?))8)k)?)?**5*h*?*?++6+i+?+?,,9,n,?,?-'I'z'?'?(
+3F33?3?4+4e4?4?55M5?5?5?676r6?6?7$7`7?7?88P8?8?99B99?9?:6:t:?:?;-;k;?;?<'<e<?<?="=a=?=?> >`>?>??!?a????@#@d@?@?A)AjA?A?B0BrB?B?C:C}C?DDGD?D?EEUE?E?F"FgF?F?G5G{G?HHKH?H?IIcI?I?J7J}J?K
+                                                    KSK?K?L*LrL?MMJM?M?N%NnN?OOIO?O?P'PqP?QQPQ?Q?R1R|R?SS_S?S?TBT?T?U(UuU?VV\V?V?WDW?W?X/X}X?YYiY?ZZVZ?Z?[E[?[?\5\?\?]']x]?^^l^?__a_?``W`?`?aOa?a?bIb?b?cCc?c?d@d?d?e=e?e?f=f?f?g=g?g?h?h?h?iCi?i?jHj?j?kOk?k?lWl?m`m?nnkn?ooxo?p+p?p?q:q?q?rKr?ss]s?ttpt?u(u?u?v>v?v?wVw?xxnx?y*y?y?zFz?{{c{?|!|?|?}A}?~~b~?#??G???
+?k?͂0????W???????G????r?ׇ;????i?Ή3?????d?ʋ0?????c?ʍ1?????f?Ώ6????n?֑?????z??M??? ?????_?ɖ4???
+?u???L???$?????h?՛B????????d?Ҟ@????????i?ءG???&????v??V?ǥ8????????n??R?ĩ7???????u??\?ЭD???-???????u??`?ֲK?³8???%???????y??h??Y?ѹJ?º;???.???!??????
+?????z???p???g???_???X???Q???K???F???Aǿ?=ȼ?:ɹ?8ʷ?6˶?5̵?5͵?6ζ?7ϸ?9к?<Ѿ?????D???I???N???U???\???d???l???v??ۀ?܊?ݖ?ޢ?)߯?6??D???S???c???s????2??F???[???p??????(??@???X???r??????4???P???m????????8???W???w????)???K???m?? 
+```
+
+2. to obtain the offset and length of a chunk which can then be extracted with dd. Ref:http://dev.exiv2.org/boards/3/topics/2635
+
+```
+(base) yangbozs-MacBook-Air-2:Downloads yangboz$ exiv2 -pS challenge.png 
+STRUCTURE OF PNG FILE: challenge.png
+ address | chunk |  length | data                           | checksum
+       8 | IHDR  |      13 | .......x....                   | 0xdc794375
+      33 | iCCP  |    2609 | ICC Profile..x...wTS.....7.P.. | 0xa4cc5c39
+    2654 | IDAT  |   65536 | x..}............"%.*V.....vz.. | 0xb5ba26fb
+   68202 | IDAT  |   65536 | c.....v.....i.....Lh4.(.J....@ | 0x111f4049
+  133750 | IDAT  |   65536 | ._?H.......o....;.?f......'~.. | 0xbc23a39d
+  199298 | IDAT  |   65536 | ..>.p.....>S.....z............ | 0x2e571658
+  264846 | IDAT  |   65536 | .'O....f...iC4m.....J.M..y..A. | 0x04aae3eb
+  330394 | IDAT  |   65536 | E..P(H...U.N._/.........f..K.. | 0x9d4b4008
+  395942 | IDAT  |   65536 | .j..z.^..SSSMSF?..3.........3U | 0xd3eff85d
+  461490 | IDAT  |   65536 | J%6..........O.........}...*.. | 0xf6295edd
+  527038 | IDAT  |   65536 | .f..R..._..T..Z.v...kG....n..Z | 0x1412f7f1
+  592586 | IDAT  |   65536 | d511.........=...$.Ix<......'. | 0x5b141933
+  658134 | IDAT  |   65536 | .......6.......*....W(...6z_|. | 0x9d8a9cac
+  723682 | IDAT  |   65536 | ...t.?....t..S....@...w..W..?. | 0xc9c1d73e
+  789230 | IDAT  |   65536 | ........y...._...e<{......w.}. | 0x3c519a62
+  854778 | IDAT  |   65536 | ?qy.(.....D.G|ttt`{{.%.....|>. | 0x43ec07ab
+  920326 | IDAT  |   65536 | ...A._....[[[p:.B.wvv.i*....@. | 0x77ac78c3
+  985874 | IDAT  |   65536 | ...?..k6.*6..........}......z. | 0x470e234e
+ 1051422 | IDAT  |   65536 | .....T..tt..n:..p8......i..g2. | 0x8cd6997d
+ 1116970 | IDAT  |   65536 | .'..t..W....S2................ | 0x34cd2f8d
+ 1182518 | IDAT  |   65536 | ........)I.X....D".....|..'... | 0x22028e18
+ 1248066 | IDAT  |   65536 | ....\..b.....uG... .....;.m... | 0x7e7f4e68
+ 1313614 | IDAT  |   65536 | .....C=........l....C.._~..... | 0x874c9e99
+ 1379162 | IDAT  |   65536 | ..d2j.,.aq.Q..pp..n..1.....o.N | 0x349e2b34
+ 1444710 | IDAT  |   65536 | ....n.....%.iC..,>.R).>....e.. | 0x2c32657b
+ 1510258 | IDAT  |   65536 | ..D.Q..y...[.g..3..rjm..?.P... | 0x7d37f530
+ 1575806 | IDAT  |   65536 | ..1.x..U+.O.<...7....._....!.5 | 0xe4fd1304
+ 1641354 | IDAT  |   65536 | .k..XXX.......T*...2....|...y. | 0x8afc81ec
+ 1706902 | IDAT  |   65536 | .....?'.S...6.....T..H.X.q.(`. | 0x623fc77b
+ 1772450 | IDAT  |   65536 | ....G....3B....I....../S.....$ | 0x351dbd6c
+ 1837998 | IDAT  |   65536 | tN._..%..D'Q......WM._0....... | 0x6139ea29
+ 1903546 | IDAT  |   65536 | h4jy.NKNS.^............1;;.... | 0x3e48bf85
+ 1969094 | IDAT  |   65536 | ....a........O.......F..H"..w~ | 0x1a982334
+ 2034642 | IDAT  |   65536 | :....h4....Q`....?.m'.....F... | 0x5c7e4a40
+ 2100190 | IDAT  |   65536 | ...39............~Ag5x......Z. | 0x4fe0b8f2
+ 2165738 | IDAT  |   65536 | ....?.9.^/...m..6..0....W..... | 0xfa494691
+ 2231286 | IDAT  |   65536 | IAJ....l6...eD"...A.......R..| | 0x0aba5019
+ 2296834 | IDAT  |   65536 | .`..(.....]Q.W...>...a..~.?.!. | 0xa07e73cd
+ 2362382 | IDAT  |   65536 | .V...(.k...={.p8............u. | 0xd3278c6b
+ 2427930 | IDAT  |   65536 | d....5k.d.O.}....r.&...?o5vww. | 0x2958d850
+ 2493478 | IDAT  |   65536 | !...^...9t:.+...o0.D.ZE..B:... | 0x9f3a3d6b
+ 2559026 | IDAT  |   65536 | .{._...r..Y.._........S....1.. | 0x8ac3bb63
+ 2624574 | IDAT  |   65536 | . ..I.^NM.\.8.N..f..Q..Z...... | 0x149f3c3a
+ 2690122 | IDAT  |   65536 | .h...G.l#]...U....i..qQqQ._.(. | 0xaef35eb6
+ 2755670 | IDAT  |   65536 | .....pp.....;..L&.].h...(..../ | 0xc837812e
+ 2821218 | IDAT  |   65536 | :..$......../..G.....f "...B.. | 0x5c9e399c
+ 2886766 | IDAT  |   65536 | j....\...q..?....M.I&...B...C& | 0xf47eb72a
+ 2952314 | IDAT  |   65536 | .T.S..^.y...........<8....?... | 0x5961f9b5
+ 3017862 | IDAT  |   65536 | t.+..>|......K...GB...S.K].c.Z | 0x1f7e0f55
+ 3083410 | IDAT  |   65536 | <....\.p..7oF{{;b.......mmm... | 0x626efb31
+ 3148958 | IDAT  |   65536 | ....7o.C.=...~...?..o.....k... | 0x4d143d1c
+ 3214506 | IDAT  |   65536 | ..../4...`0...............f... | 0x8af9a1c7
+ 3280054 | IDAT  |   65536 | ..k....:A...]...7..M.......l*. | 0x9d18795f
+ 3345602 | IDAT  |   65536 | $....nll.|............qLNNbjj. | 0x5e10e67c
+ 3411150 | IDAT  |   65536 | ....R..0...*&'';.....y...l.... | 0xe9f3eee2
+ 3476698 | IDAT  |   12126 | *..1........}.....?...3w..y... | 0x87e7e2e4
+ 3488836 | IEND  |       0 | 
+```
+
+### 0.31 BTC
+
+### 310 BTC
+
+https://www.blockchain.com/btc/tree/380216200
+
+![review of 310BTC solution](https://raw.githubusercontent.com/yangboz/bitcoin-puzzles/master/310-btc/310Results.png)
+
+## references
+
+https://www.reddit.com/r/Bitcoin/comments/9kq7it/introducing_the_310_btc_bitcoin_challenge/
+
+https://www.youtube.com/results?search_query=bitcoin+challenge+310
+
+https://github.com/yangboz/imagemagick-cheatsheet
+
+http://www.libpng.org/pub/png/spec/1.2/PNG-Decoders.html
+
+http://www.libpng.org/pub/png/spec/1.2/PNG-ColorAppendix.html
+
+https://www.sno.phy.queensu.ca/~phil/exiftool/TagNames/PNG.html
+
+http://dev.exiv2.org/boards/3/topics/2635
+
+https://purepng.readthedocs.io/en/latest/chunk.html
