@@ -8,7 +8,7 @@
 
 2.重金之下必有勇夫，知音难觅；
 
-3.还是类似 ![Cicada 3301]（https://en.wikipedia.org/wiki/Cicada_3301）在招募？
+3.还是类似 [Cicada 3301!]（https://en.wikipedia.org/wiki/Cicada_3301）在招募?
 
 且听作者再描述。
 
