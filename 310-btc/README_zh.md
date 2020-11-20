@@ -29,7 +29,8 @@
 追踪报道更新如下：
 
 
-## Solutions:
+
+## Solutions:解决方案如下
 
 ### 0.1 BTC  ：https://bitcointalk.org/index.php?topic=5042285.40
 
@@ -37,7 +38,8 @@
 
 #### Print out and look
 
-hint: Partly
+将图片打印出来 仔细观看
+hint: Partly 提示： Partly
 
 Ref: http://msn.iecs.fcu.edu.tw/~ccc/profile/publish/ij_paper2/IJ-664.pdf
 
