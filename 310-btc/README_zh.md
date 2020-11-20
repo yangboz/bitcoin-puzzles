@@ -32,6 +32,8 @@
 
 ## Solutions:解决方案如下
 
+说在前面，[波希战争就使用到了图片隐写术](https://zhuanlan.zhihu.com/p/136445481)
+
 ### 0.1 BTC  ：https://bitcointalk.org/index.php?topic=5042285.40
 
 [](https://raw.githubusercontent.com/yangboz/bitcoin-puzzles/master/310-btc/solutions_1_2.jpg)
